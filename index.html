@@ -22,7 +22,14 @@
       </button>
       <ul class="nav__links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
+        <li class="nav__item">
+          <button class="nav__dropdown-btn" aria-expanded="false">About</button>
+          <ul class="nav__submenu">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="agm.html">AGM</a></li>
+          </ul>
+        </li>
         <li><a href="#breed">Breed</a></li>
         <li><a href="#playgroups">Playgroups</a></li>
         <li><a href="#events">Events</a></li>
@@ -87,6 +94,16 @@
           <h2>About the Club</h2>
         </div>
         <div class="about__grid">
+          <div class="about__visual reveal">
+            <div class="logo-visual">
+              <div class="logo-visual__ring"></div>
+              <div class="logo-visual__ring logo-visual__ring--inner"></div>
+              <img src="assets/images/logo.jpg" alt="Dominion Chihuahua Club" class="logo-visual__img" />
+            </div>
+            <div class="logo-visual__caption">
+              <p>Canterbury&rsquo;s only Chihuahua specialty club &mdash; celebrating the breed since 1964.</p>
+            </div>
+          </div>
           <div class="about__text reveal">
             <p class="lead">Founded in 1964 in Canterbury, New Zealand, the Dominion Chihuahua Club Inc is one of the country&rsquo;s most respected breed clubs &mdash; dedicated to promoting and protecting the beautiful Chihuahua.</p>
             <p>For over six decades, our club has brought together Chihuahua enthusiasts from across Canterbury and beyond. We celebrate the breed&rsquo;s unique spirit through education, responsible breeding, and &mdash; most of all &mdash; our beloved weekly playgroups.</p>

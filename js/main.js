@@ -111,6 +111,23 @@ joinForm?.addEventListener('submit', e => {
 
 // Real photos are now used throughout — no API fetch needed.
 
+// --- Nav dropdown ---
+document.querySelectorAll('.nav__item').forEach(item => {
+  const btn = item.querySelector('.nav__dropdown-btn');
+  if (!btn) return;
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.nav__item.open').forEach(el => {
+    el.classList.remove('open');
+    el.querySelector('.nav__dropdown-btn')?.setAttribute('aria-expanded', 'false');
+  });
+});
+
 // --- Video placeholder ---
 document.querySelectorAll('.video-thumb').forEach(vp => {
   vp.addEventListener('click', () => {

@@ -16,6 +16,23 @@ toggle?.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', String(open));
 });
 
+// ---- Nav dropdown ----
+document.querySelectorAll('.nav__item').forEach(item => {
+  const btn = item.querySelector('.nav__dropdown-btn');
+  if (!btn) return;
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.nav__item.open').forEach(el => {
+    el.classList.remove('open');
+    el.querySelector('.nav__dropdown-btn')?.setAttribute('aria-expanded', 'false');
+  });
+});
+
 // ============================================================
 // MEMBERSHIP FEE — update to your actual annual fee e.g. 40
 // ============================================================
