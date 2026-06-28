@@ -620,7 +620,7 @@ ul  { list-style: none; }
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 260px 180px;
+  grid-template-rows: 260px 180px 200px;
   gap: .75rem;
   margin-bottom: 3rem;
   border-radius: var(--r);
