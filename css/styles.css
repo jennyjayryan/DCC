@@ -1399,12 +1399,12 @@ ul  { list-style: none; }
 }
 
 .logo-visual__img {
-  width: 200px;
-  height: 200px;
+  width: 248px;
+  height: 248px;
   border-radius: 50%;
   object-fit: contain;
   background: var(--white);
-  padding: 1rem;
+  padding: .75rem;
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border);
 }
