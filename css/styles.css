@@ -571,30 +571,48 @@ ul  { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: 1rem 2rem;
-  background: linear-gradient(90deg, var(--green-dark), var(--green));
+  gap: 1.25rem;
+  padding: 1.1rem 2rem;
+  background: #111;
   border-radius: var(--r);
   margin-bottom: 2.5rem;
   flex-wrap: wrap;
-  color: var(--white);
+  color: #FF7A00;
+  border: 1px solid #2a2a2a;
 }
 
-.sponsor-label { font-size: .75rem; opacity: .8; text-transform: uppercase; letter-spacing: .1em; }
+.sponsor-banner:hover { background: #1a1a1a; }
+
+.sponsor-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.sponsor-label {
+  font-size: .72rem;
+  opacity: .7;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #FF7A00;
+}
 
 .sponsor-name {
   font-family: var(--serif);
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: .04em;
+  color: #FF7A00;
 }
 
 .sponsor-pill {
   font-size: .72rem;
-  background: rgba(255,255,255,.2);
+  background: rgba(255,122,0,.15);
   padding: .22rem .7rem;
   border-radius: var(--r-pill);
-  border: 1px solid rgba(255,255,255,.25);
+  border: 1px solid rgba(255,122,0,.35);
+  color: #FF7A00;
 }
 
 .bento-grid {
