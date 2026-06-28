@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dominion Chihuahua Club Inc – Canterbury, NZ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header id="site-header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">
+        <span class="logo-badge">DCC</span>
+        <span class="logo-text">Dominion Chihuahua Club</span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#breed">Breed</a></li>
+        <li><a href="#playgroups">Playgroups</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#join">Join</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <!--
+        PHOTO: Replace the gradient below with your hero image.
+        In styles.css → .hero__bg, set:
+          background-image: url('assets/images/hero.jpg');
+        Recommended: high-res landscape of Chihuahuas at play, 1920×1080+
+      -->
+      <div class="hero__bg"></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content container">
+        <span class="hero__eyebrow">Canterbury, New Zealand &middot; Est. 1964</span>
+        <h1 class="hero__title">
+          Welcome to the<br>
+          <em>Dominion Chihuahua Club</em>
+        </h1>
+        <p class="hero__subtitle">Where Playgroups Bring Us Together!</p>
+        <div class="hero__ctas">
+          <a href="#playgroups" class="btn btn--primary">Join Our Playgroup</a>
+          <a href="#about" class="btn btn--outline">Learn Our Story</a>
+        </div>
+      </div>
+      <div class="hero__scroll">&#8595;</div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow">Our Story</span>
+          <h2>About the Club</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p class="lead">Founded in 1964 in Canterbury, New Zealand, the Dominion Chihuahua Club Inc is one of the country&rsquo;s most respected breed clubs &mdash; dedicated to promoting and protecting the beautiful Chihuahua.</p>
+            <p>For over six decades, our club has brought together Chihuahua enthusiasts from across Canterbury and beyond. We celebrate the breed&rsquo;s unique spirit through education, responsible breeding, and &mdash; most of all &mdash; our beloved weekly playgroups.</p>
+            <div class="values">
+              <div class="value-card" style="--accent: var(--red);">
+                <div class="value-icon">&#10084;&#65039;</div>
+                <div>
+                  <strong>Love</strong>
+                  <p>A deep passion for Chihuahuas and their wellbeing</p>
+                </div>
+              </div>
+              <div class="value-card" style="--accent: var(--green);">
+                <div class="value-icon">&#129309;</div>
+                <div>
+                  <strong>Respect</strong>
+                  <p>Honouring the breed standard and each other</p>
+                </div>
+              </div>
+              <div class="value-card" style="--accent: var(--red);">
+                <div class="value-icon">&#128218;</div>
+                <div>
+                  <strong>Education</strong>
+                  <p>Sharing knowledge to raise exceptional Chihuahuas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__timeline reveal">
+            <h3>Our History</h3>
+            <div class="timeline">
+              <div class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <span class="timeline__year">1964</span>
+                  <p>Club founded in Canterbury, NZ, by passionate Chihuahua breeders and enthusiasts</p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <span class="timeline__year">1970s</span>
+                  <p>First annual Specialty Shows established, drawing entries from across New Zealand</p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <span class="timeline__year">1990s</span>
+                  <p>Weekly playgroups launched &mdash; now a beloved and central club tradition</p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <span class="timeline__year">2019</span>
+                  <p>Celebrated our Speciality Show with record-breaking attendance and entries</p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <div class="timeline__dot timeline__dot--active"></div>
+                <div class="timeline__body">
+                  <span class="timeline__year">Today</span>
+                  <p>Growing strong &mdash; weekly playgroups, championship shows, and a vibrant community</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BREED STANDARD ===== -->
+    <section id="breed" class="section section--alt">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow">The Breed</span>
+          <h2>Chihuahua Breed Standard</h2>
+          <p class="section__desc">Small, dainty, alert, and swift-moving &mdash; the Chihuahua is a big personality in a tiny, elegant package.</p>
+        </div>
+
+        <div class="traits reveal">
+          <div class="trait-card">
+            <div class="trait-icon wc-icon" style="--wc: #CE1126;">&#128300;</div>
+            <h4>Compact Size</h4>
+            <p>Under 3&nbsp;kg &mdash; the world&rsquo;s smallest recognised breed, perfectly portable and full of life</p>
+          </div>
+          <div class="trait-card">
+            <div class="trait-icon wc-icon" style="--wc: #006847;">&#128065;&#65039;</div>
+            <h4>Expressive Eyes</h4>
+            <p>Large, luminous, round eyes set wide apart &mdash; full of intelligence and character</p>
+          </div>
+          <div class="trait-card">
+            <div class="trait-icon wc-icon" style="--wc: #CE1126;">&#9889;</div>
+            <h4>Swift &amp; Alert</h4>
+            <p>Quick, graceful movement with a confident, saucy expression and erect ears</p>
+          </div>
+          <div class="trait-card">
+            <div class="trait-icon wc-icon" style="--wc: #006847;">&#129504;</div>
+            <h4>Spirited Temperament</h4>
+            <p>Bold, loyal, and devoted &mdash; a fierce and tender heart in every Chihuahua</p>
+          </div>
+        </div>
+
+        <div class="coat-section reveal">
+          <h3>Two Coat Varieties</h3>
+          <div class="coat-grid">
+            <div class="coat-card">
+              <!--
+                PHOTO: assets/images/smooth-coat.jpg
+                Show: profile shot of smooth coat Chihuahua, well-lit, high resolution
+              -->
+              <div class="coat-photo" style="background: linear-gradient(135deg, #f5e6e6, #e8d5d5);">
+                <img class="coat-img" alt="Smooth Coat Chihuahua" />
+                <span class="photo-label">&#128021; Replace with smooth coat photo</span>
+              </div>
+              <div class="coat-info">
+                <h4>Smooth Coat</h4>
+                <p>Short, glossy, close-lying coat. Clean, sleek lines that showcase the breed&rsquo;s elegant structure and definition.</p>
+              </div>
+            </div>
+            <div class="coat-card">
+              <!--
+                PHOTO: assets/images/long-coat.jpg
+                Show: front/profile of long coat Chihuahua showing silky flowing fur
+              -->
+              <div class="coat-photo" style="background: linear-gradient(135deg, #e6f0e9, #d5e8d8);">
+                <img class="coat-img" alt="Long Coat Chihuahua" />
+                <span class="photo-label">&#128021; Replace with long coat photo</span>
+              </div>
+              <div class="coat-info">
+                <h4>Long Coat</h4>
+                <p>Soft, silky, fine coat &mdash; slightly wavy or flat. A flowing mane, feathered ears, and a plumed tail complete the look.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PLAYGROUPS ===== -->
+    <section id="playgroups" class="section section--dark">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow eyebrow--light">Community</span>
+          <h2 class="text-white">Weekly Playgroups</h2>
+          <p class="section__desc text-muted-light">Our playgroups are the heartbeat of the Dominion Chihuahua Club &mdash; a safe, joyful space where little dogs make big friendships.</p>
+        </div>
+
+        <div class="sponsor-banner reveal">
+          <span class="sponsor-label">Proudly sponsored by</span>
+          <span class="sponsor-name">KuriUser</span>
+          <span class="sponsor-pill">Official Playgroup Partner</span>
+        </div>
+
+        <!--
+          PHOTOS: Replace .bento-bg-* divs with <img> tags or CSS background-image
+          showing your actual playgroup photos. Aim for warm, candid shots.
+        -->
+        <div class="bento-grid reveal">
+          <div class="bento-item bento-item--hero bento-bg-1">
+            <img class="bento-img" alt="Chihuahuas playing at playgroup" />
+            <div class="bento-overlay"><span>&#128062; Main Playgroup</span></div>
+          </div>
+          <div class="bento-item bento-bg-2">
+            <img class="bento-img" alt="Chihuahuas socialising" />
+            <div class="bento-overlay"><span>Socialising</span></div>
+          </div>
+          <div class="bento-item bento-bg-3">
+            <img class="bento-img" alt="Chihuahua playing" />
+            <div class="bento-overlay"><span>Playtime</span></div>
+          </div>
+          <div class="bento-item bento-item--wide bento-bg-4">
+            <img class="bento-img" alt="Chihuahua group photo" />
+            <div class="bento-overlay"><span>The Gang &#128062;</span></div>
+          </div>
+          <div class="bento-item bento-bg-5">
+            <img class="bento-img" alt="Chihuahua running" />
+            <div class="bento-overlay"><span>Zoomies!</span></div>
+          </div>
+        </div>
+
+        <div class="playgroup-info">
+          <div class="schedule-card reveal">
+            <h3>&#128197; Playgroup Schedule</h3>
+            <ul class="schedule-list">
+              <li>
+                <span class="schedule-day">Every Saturday</span>
+                <span class="schedule-time">10:00 am &ndash; 12:00 pm</span>
+              </li>
+              <li>
+                <span class="schedule-day">Location</span>
+                <span class="schedule-time">Canterbury, NZ (address sent to members)</span>
+              </li>
+              <li>
+                <span class="schedule-day">Entry</span>
+                <span class="schedule-time">Members free &middot; Visitors welcome (gold coin)</span>
+              </li>
+            </ul>
+            <a href="#join" class="btn btn--primary">Join Our Playgroup</a>
+          </div>
+          <div class="playgroup-features">
+            <div class="feature reveal">
+              <span class="feature-icon">&#128737;&#65039;</span>
+              <div>
+                <strong>Safe Environment</strong>
+                <p>Fully fenced, supervised play area designed for small dogs</p>
+              </div>
+            </div>
+            <div class="feature reveal">
+              <span class="feature-icon">&#129309;</span>
+              <div>
+                <strong>Community Spirit</strong>
+                <p>Meet fellow Chihuahua lovers and share tips, stories, and laughter</p>
+              </div>
+            </div>
+            <div class="feature reveal">
+              <span class="feature-icon">&#128247;</span>
+              <div>
+                <strong>Photo Opportunities</strong>
+                <p>Capture precious candid moments of your Chihuahua at play</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EVENTS ===== -->
+    <section id="events" class="section">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow">What&rsquo;s On</span>
+          <h2>Upcoming Events</h2>
+        </div>
+        <div class="events-grid">
+          <div class="event-card event-card--featured reveal">
+            <div class="event-photo" style="background: linear-gradient(135deg, #CE1126 0%, #8B0D1A 100%);">
+              <img class="event-img" alt="2026 Specialty Show" />
+              <span class="photo-label photo-label--light">&#127942; Replace with Specialty Show photo</span>
+            </div>
+            <div class="event-details">
+              <span class="badge">Annual Show</span>
+              <h3>2026 Specialty Show</h3>
+              <p class="event-date">&#128197; Date TBC &middot; Canterbury, NZ</p>
+              <p>Our flagship breed show &mdash; celebrating the very best of the Chihuahua. All members welcome to enter and attend.</p>
+              <a href="#join" class="btn btn--outline-dark btn--sm">Register Interest</a>
+            </div>
+          </div>
+
+          <div class="event-card reveal">
+            <div class="event-photo event-photo--sm" style="background: linear-gradient(135deg, #006847, #004d34);">
+              <img class="event-img" alt="Saturday Playgroup" />
+              <span class="photo-label photo-label--light">&#128062; Replace with playgroup photo</span>
+            </div>
+            <div class="event-details">
+              <span class="badge badge--green">Weekly</span>
+              <h3>Saturday Playgroup</h3>
+              <p class="event-date">&#128197; Every Saturday &middot; 10am</p>
+              <p>Sponsored by <strong>KuriUser</strong>. Open to members and visitors.</p>
+            </div>
+          </div>
+
+          <div class="event-card reveal">
+            <div class="event-photo event-photo--sm" style="background: linear-gradient(135deg, #2d2d2d, #444);">
+              <img class="event-img" alt="Winter Social Gathering" />
+              <span class="photo-label photo-label--light">&#127881; Replace with social event photo</span>
+            </div>
+            <div class="event-details">
+              <span class="badge badge--red">Social</span>
+              <h3>Winter Social Gathering</h3>
+              <p class="event-date">&#128197; July 2026 &middot; Date TBC</p>
+              <p>A warm midwinter get-together for members and their beloved Chihuahuas.</p>
+            </div>
+          </div>
+
+          <div class="event-card reveal">
+            <div class="event-photo event-photo--sm" style="background: linear-gradient(135deg, #9B8EA0, #6B5E70);">
+              <img class="event-img" alt="2019 Speciality Show" />
+              <span class="photo-label photo-label--light">&#128247; Replace with 2019 Show photo</span>
+            </div>
+            <div class="event-details">
+              <span class="badge">Past Event</span>
+              <h3>2019 Speciality Show</h3>
+              <p class="event-date">&#128197; October 2019 &middot; Canterbury</p>
+              <p>A wonderful day &mdash; view photos from one of our most memorable specialty shows.</p>
+              <a href="#resources" class="btn btn--outline-dark btn--sm">View Gallery</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== JOIN ===== -->
+    <section id="join" class="section section--alt">
+      <div class="container">
+        <div class="join-cta">
+          <div class="join-cta__text reveal">
+            <span class="eyebrow">Membership</span>
+            <h2>Join Our Club</h2>
+            <p>Become part of our wonderful Chihuahua community. Members enjoy free playgroup entry, show discounts, newsletters, and the company of fellow enthusiasts who truly understand the joy of life with a Chihuahua.</p>
+            <ul class="perks-list">
+              <li>&#9989; Free weekly playgroup access</li>
+              <li>&#9989; Club newsletter &amp; breed updates</li>
+              <li>&#9989; Discounted show entry fees</li>
+              <li>&#9989; Access to breeder referrals</li>
+              <li>&#9989; Supportive community of owners</li>
+            </ul>
+            <a href="join.html" class="btn btn--primary join-cta__btn">Apply for Membership</a>
+          </div>
+          <div class="join-cta__card reveal">
+            <img class="join-cta__chi" alt="Chihuahua portrait" />
+            <div class="join-cta__info">
+              <div class="join-cta__fee">
+                <span class="fee-label">Annual Membership</span>
+                <span class="fee-types">Individual &bull; Family &bull; Junior</span>
+              </div>
+              <p>Pay securely online via Stripe &mdash; scan the QR code on the membership page.</p>
+              <a href="join.html" class="btn btn--outline-dark btn--sm">Start Application &#8594;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESOURCES ===== -->
+    <section id="resources" class="section">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow">Knowledge Base</span>
+          <h2>Resources</h2>
+          <p class="section__desc">Useful links, breed standards, and video content for Chihuahua owners and enthusiasts.</p>
+        </div>
+
+        <div class="resources-grid">
+          <a class="resource-card reveal" href="https://www.nzkc.org.nz" target="_blank" rel="noopener">
+            <div class="resource-icon">&#127963;&#65039;</div>
+            <h4>NZ Kennel Club</h4>
+            <p>Official breed standards, registration, and show information for New Zealand.</p>
+            <span class="tag">Breed Standards</span>
+          </a>
+          <a class="resource-card reveal" href="https://www.thekennelclub.org.uk" target="_blank" rel="noopener">
+            <div class="resource-icon">&#127988;&#8205;&#128315;</div>
+            <h4>The Kennel Club (UK)</h4>
+            <p>Royal Kennel Club breed standard and guidance for Chihuahua owners worldwide.</p>
+            <span class="tag">Standards</span>
+          </a>
+          <a class="resource-card reveal" href="https://www.britishchihuahuaclub.org.uk" target="_blank" rel="noopener">
+            <div class="resource-icon">&#128021;</div>
+            <h4>British Chihuahua Club</h4>
+            <p>Code of ethics, health advice, and resources from our sister club in the United Kingdom.</p>
+            <span class="tag">Code of Ethics</span>
+          </a>
+          <a class="resource-card reveal" href="https://www.akc.org/dog-breeds/chihuahua/" target="_blank" rel="noopener">
+            <div class="resource-icon">&#127482;&#127480;</div>
+            <h4>American Kennel Club</h4>
+            <p>AKC breed information, health resources, and international Chihuahua community links.</p>
+            <span class="tag">International</span>
+          </a>
+
+          <div class="resource-card resource-card--video reveal">
+            <!--
+              VIDEO: Replace with <video> or <iframe> embed
+              File: assets/videos/playgroup-highlight.mp4
+            -->
+            <div class="video-thumb">
+              <div class="video-play">&#9654;</div>
+              <span>Playgroup Highlights</span>
+            </div>
+            <h4>Weekly Playgroup Video</h4>
+            <p>Watch our Chihuahuas socialise, play, and show off their big personalities.</p>
+          </div>
+
+          <div class="resource-card resource-card--video reveal">
+            <!--
+              VIDEO: Replace with <video> or <iframe> embed
+              File: assets/videos/breed-showcase.mp4
+            -->
+            <div class="video-thumb">
+              <div class="video-play">&#9654;</div>
+              <span>Breed Showcase</span>
+            </div>
+            <h4>Breed Showcase</h4>
+            <p>An overview of the Chihuahua breed &mdash; temperament, care, and what makes them special.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="logo-badge footer__logo-badge">DCC</div>
+          <p><strong>Dominion Chihuahua Club Inc</strong><br>Canterbury, New Zealand &middot; Est. 1964</p>
+          <p class="footer__sponsor">Playgroups proudly sponsored by <strong>KuriUser</strong></p>
+        </div>
+        <div>
+          <h5>Quick Links</h5>
+          <ul class="footer__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#breed">Breed Standard</a></li>
+            <li><a href="#playgroups">Playgroups</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#join">Join</a></li>
+            <li><a href="#resources">Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact Us</h5>
+          <p>Canterbury, New Zealand</p>
+          <a href="mailto:info@dominionchihuahuaclub.co.nz">info@dominionchihuahuaclub.co.nz</a>
+          <p class="footer__tagline">Follow us for playgroup updates &amp; event photos &#128247;</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dominion Chihuahua Club Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

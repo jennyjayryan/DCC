@@ -1,0 +1,44 @@
+DOMINION CHIHUAHUA CLUB – PHOTO & VIDEO GUIDE
+==============================================
+
+Drop your photos and videos in the folders below, then update
+the matching elements in index.html and css/styles.css.
+
+IMAGES  (place in assets/images/)
+----------------------------------
+hero.jpg            Hero banner – landscape, Chihuahuas at play, 1920×1080+
+                    In styles.css → .hero__bg, set:
+                    background-image: url('assets/images/hero.jpg');
+                    background-size: cover; background-position: center;
+
+smooth-coat.jpg     Profile/side shot of a smooth coat Chihuahua, high-res
+long-coat.jpg       Front/profile of a long coat showing silky fur, high-res
+                    In index.html replace the .coat-photo divs with:
+                    <img src="assets/images/smooth-coat.jpg" alt="Smooth Coat Chihuahua" />
+
+playgroup-1.jpg     Main playgroup shot (bento hero cell)
+playgroup-2.jpg     Dogs socialising
+playgroup-3.jpg     Playtime / action shot
+playgroup-4.jpg     Group / wide shot
+playgroup-5.jpg     Zoomies / running shot
+                    In index.html replace .bento-bg-* divs with:
+                    <img src="assets/images/playgroup-1.jpg" alt="..." class="bento-img" />
+                    Add to CSS: .bento-img { width:100%; height:100%; object-fit:cover; }
+
+specialty-show.jpg  2026 Specialty Show or a ribbon/ring shot
+past-event.jpg      2019 Speciality Show photo
+                    In index.html replace the .event-photo divs with <img> tags.
+
+VIDEOS  (place in assets/videos/)
+----------------------------------
+playgroup-highlight.mp4    Playgroup highlights reel
+breed-showcase.mp4         Breed showcase video
+                           Replace .video-thumb divs with:
+                           <video src="assets/videos/playgroup-highlight.mp4" controls poster="assets/images/playgroup-1.jpg"></video>
+
+TIPS
+----
+- Use WebP format for images where possible (smaller file size, great quality)
+- Aim for < 500 KB per image after compression (TinyPNG or Squoosh are great tools)
+- Keep originals backed up separately
+- Minimum recommended size: 800×600 for cards, 1920×1080 for hero/bento

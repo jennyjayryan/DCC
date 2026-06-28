@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join – Dominion Chihuahua Club Inc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header id="site-header">
+    <nav class="nav container">
+      <a href="index.html#home" class="nav__logo">
+        <span class="logo-badge">DCC</span>
+        <span class="logo-text">Dominion Chihuahua Club</span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#breed">Breed</a></li>
+        <li><a href="index.html#playgroups">Playgroups</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+        <li><a href="index.html#resources">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Membership Application</span>
+        <h1>Join the Dominion Chihuahua Club</h1>
+        <p>Fill in the form below and pay your annual membership fee via Stripe or bank transfer. We&rsquo;ll confirm your membership within 2&ndash;3 business days.</p>
+      </div>
+    </section>
+
+    <!-- ===== APPLICATION FORM ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <span class="eyebrow">Membership Application</span>
+          <h2>Your Details &amp; Payment</h2>
+        </div>
+
+        <div class="application-layout">
+
+          <!-- LEFT: Application Form -->
+          <div>
+            <div class="application-form" id="application-form-wrap">
+              <form id="application-form" novalidate>
+
+                <h2>Application for Membership</h2>
+                <p style="color:var(--muted);font-size:.9rem;margin-bottom:1.75rem;">
+                  In accordance with the Incorporated Societies Act 2022, we are required to maintain a Register of Members including current contact details.
+                </p>
+
+                <!-- Applicant Details -->
+                <div class="form-section-title">Applicant Details</div>
+
+                <div class="form-group">
+                  <label for="j-name">Full Name *</label>
+                  <input type="text" id="j-name" name="fullName" required placeholder="Jane Smith" />
+                </div>
+
+                <div class="form-group">
+                  <label for="j-physical">Physical Address *</label>
+                  <input type="text" id="j-physical" name="physicalAddress" required placeholder="123 Example Street, Christchurch" />
+                </div>
+
+                <div class="form-group">
+                  <label for="j-postal">Postal Address <span style="font-weight:400;color:var(--muted);">(if different from above)</span></label>
+                  <input type="text" id="j-postal" name="postalAddress" placeholder="PO Box or alternate address" />
+                </div>
+
+                <div class="form-group">
+                  <label for="j-email">Email Address *</label>
+                  <input type="email" id="j-email" name="email" required placeholder="jane@example.com" />
+                </div>
+
+                <div class="form-group">
+                  <label for="j-phone">Phone Number *</label>
+                  <input type="tel" id="j-phone" name="phone" required placeholder="+64 21 000 0000" />
+                </div>
+
+                <div class="form-group">
+                  <label for="j-date">Date of Application *</label>
+                  <input type="date" id="j-date" name="dateOfApplication" required />
+                </div>
+
+                <!-- Dog Names -->
+                <div class="form-section-title">Dog/s Name/s</div>
+                <div id="dog-entries">
+                  <div class="dog-entry">
+                    <div class="form-group">
+                      <label for="dog-name-1">Dog 1 Name *</label>
+                      <input type="text" id="dog-name-1" name="dogName1" required placeholder="e.g. Bella" />
+                    </div>
+                  </div>
+                </div>
+                <button type="button" id="add-dog-btn" class="btn btn--outline-dark btn--sm" style="margin-bottom:1.5rem;">+ Add another dog</button>
+
+                <!-- Mandatory Consent & Declaration -->
+                <div class="form-section-title">Mandatory Consent &amp; Declaration</div>
+                <p style="color:var(--muted);font-size:.875rem;margin-bottom:1.25rem;">
+                  Please read and tick each statement to complete your application. All four are required by the Incorporated Societies Act 2022.
+                </p>
+
+                <div class="declaration-list">
+
+                  <div class="declaration-item">
+                    <input type="checkbox" id="decl-consent" name="declConsent" required />
+                    <label for="decl-consent">
+                      <strong>Consent to Membership</strong><br>
+                      I hereby consent to becoming a member of the Dominion Chihuahua Club&nbsp;Inc.
+                      <!--
+                        NOTE: The original paper form says "Canterbury Toy Dog Society (Inc)".
+                        Update this line if DCC members are formally joining CTDS instead.
+                      -->
+                    </label>
+                  </div>
+
+                  <div class="declaration-item">
+                    <input type="checkbox" id="decl-rules" name="declRules" required />
+                    <label for="decl-rules">
+                      <strong>Agreement to Rules</strong><br>
+                      I agree to be bound by the Constitution and Bylaws of the Dominion Chihuahua Club and any regulations set by Dogs New Zealand.
+                    </label>
+                  </div>
+
+                  <div class="declaration-item">
+                    <input type="checkbox" id="decl-register" name="declRegister" required />
+                    <label for="decl-register">
+                      <strong>Register of Members</strong><br>
+                      I acknowledge that my name and contact details will be held on the Society&rsquo;s Register of Members and used for society-related communications, as required by Section&nbsp;79 of the Incorporated Societies Act 2022.
+                    </label>
+                  </div>
+
+                  <div class="declaration-item">
+                    <input type="checkbox" id="decl-dogsnz" name="declDogsNZ" required />
+                    <label for="decl-dogsnz">
+                      <strong>Dogs NZ Compliance</strong><br>
+                      I agree to abide by the Rules and Regulations of Dogs New Zealand.
+                    </label>
+                  </div>
+
+                </div>
+
+                <!-- Payment confirmation -->
+                <div class="form-section-title">Payment</div>
+                <div class="form-group form-check">
+                  <input type="checkbox" id="j-paid" name="paymentConfirmed" />
+                  <label for="j-paid">I have completed payment of the annual membership fee via Stripe or bank transfer</label>
+                </div>
+
+                <button type="submit" class="btn btn--primary btn--full" style="margin-top:1.5rem;" id="submit-btn">
+                  Submit Application &amp; Send Email
+                </button>
+                <p class="form-note">
+                  Clicking submit will open your email client with a pre-filled application addressed to the club.<br>
+                  We&rsquo;ll be in touch within 2&ndash;3 business days. &#128149;
+                </p>
+
+                <!-- Office Use Only -->
+                <div class="office-use">
+                  <div class="office-use__title">Office Use Only</div>
+                  <div class="office-use__grid">
+                    <div>
+                      <span>Date Received</span>
+                      <span>___ / ___ / 202__</span>
+                    </div>
+                    <div>
+                      <span>Committee Approval Date</span>
+                      <span>___ / ___ / 202__</span>
+                    </div>
+                    <div>
+                      <span>Date Added to Register</span>
+                      <span>___ / ___ / 202__</span>
+                    </div>
+                    <div>
+                      <span>Membership Paid</span>
+                      <span>$_________ (Receipt #___________)</span>
+                    </div>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+
+            <!-- Success screen (shown after submit) -->
+            <div class="application-form success-screen" id="success-screen">
+              <div class="success-icon">&#127881;</div>
+              <h2>Application Sent!</h2>
+              <p>Your membership application email has been prepared. Please check your email client and hit <strong>Send</strong> to complete the process.</p>
+              <p>We&rsquo;ll be in touch within 2&ndash;3 business days to confirm your membership.</p>
+              <a href="index.html" class="btn btn--primary" style="margin-top:1rem;">Back to Home</a>
+            </div>
+          </div>
+
+          <!-- RIGHT: Payment Sidebar -->
+          <div class="payment-sidebar">
+
+            <!-- Order Summary -->
+            <div class="payment-card">
+              <h3>&#128203; Order Summary</h3>
+              <div class="order-summary">
+                <div class="order-row">
+                  <span>Annual Membership</span>
+                  <!--
+                    UPDATE: Replace $20.00 with your actual annual fee.
+                    Also update the matching amount in the QR amount below
+                    and in js/join.js → MEMBERSHIP_FEE
+                  -->
+                  <span id="summary-price">$20.00</span>
+                </div>
+                <div class="order-row">
+                  <span>Processing fee</span>
+                  <span>$0.00</span>
+                </div>
+                <div class="order-row total">
+                  <span>Total due</span>
+                  <span id="summary-total">$20.00</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="payment-card">
+              <h3>&#128179; Payment Method</h3>
+              <div class="payment-methods" id="payment-methods">
+
+                <label class="pmethod selected" data-method="stripe">
+                  <input type="radio" name="paymentMethod" value="stripe" checked />
+                  <div class="pmethod-radio"></div>
+                  <span class="pmethod-icon">&#128179;</span>
+                  <div>
+                    <span class="pmethod-label">Pay with Stripe</span>
+                    <span class="pmethod-sub">Card, Apple Pay, Google Pay</span>
+                  </div>
+                </label>
+
+                <label class="pmethod" data-method="bank">
+                  <input type="radio" name="paymentMethod" value="bank" />
+                  <div class="pmethod-radio"></div>
+                  <span class="pmethod-icon">&#127981;</span>
+                  <div>
+                    <span class="pmethod-label">Bank Transfer</span>
+                    <span class="pmethod-sub">Internet banking</span>
+                  </div>
+                </label>
+
+              </div>
+
+              <!-- Stripe Buy Button Panel -->
+              <div class="qr-panel visible" id="qr-panel">
+                <p style="font-size:.85rem;color:var(--muted);margin-bottom:1.25rem;">
+                  Click the button below to pay your annual membership fee securely via Stripe.
+                </p>
+                <div class="stripe-btn-wrap">
+                  <stripe-buy-button
+                    buy-button-id="buy_btn_1Tn9PQAlcmFrNIZQzPwjUvdE"
+                    publishable-key="pk_live_51TOFUYAlcmFrNIZQfj6BEWGyIbOXUFhczOAj8ufNJkZ7B9ap2LgGJN0SDzOX2ZDsFMPx7pu4OozdVo5dwcd5hXjh009UoiK22u"
+                  ></stripe-buy-button>
+                </div>
+                <p class="stripe-note">Secured by <strong>Stripe</strong> &mdash; card, Apple Pay &amp; Google Pay accepted</p>
+              </div>
+
+              <!-- Bank Transfer Panel -->
+              <div class="bank-panel" id="bank-panel">
+                <p style="font-size:.85rem;color:var(--muted);margin-bottom:.9rem;">Transfer your membership fee to:</p>
+                <dl class="bank-details">
+                  <dt>Account Name</dt>
+                  <dd>DOMINION CHIHUAHUA CLUB INCORPORATED</dd>
+                  <dt>Bank</dt>
+                  <dd>Kiwibank</dd>
+                  <dt>Account Number</dt>
+                  <dd>38-9025-0374077-00</dd>
+                  <dt>Amount</dt>
+                  <dd>$20.00</dd>
+                  <dt>Reference</dt>
+                  <dd id="bank-reference">MEMBERSHIP &ndash; [Your Name]</dd>
+                </dl>
+                <p style="font-size:.8rem;color:var(--muted);margin-top:.75rem;">
+                  Please use your full name as the payment reference so we can match your payment.
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefits reminder -->
+            <div class="payment-card">
+              <h3>&#127775; Member Benefits</h3>
+              <ul style="display:flex;flex-direction:column;gap:.6rem;font-size:.9rem;color:var(--muted);">
+                <li>&#9989; Free weekly playgroup access</li>
+                <li>&#9989; Club newsletter &amp; breed updates</li>
+                <li>&#9989; Discounted show entry fees</li>
+                <li>&#9989; Access to breeder referrals</li>
+                <li>&#9989; Supportive community of owners</li>
+                <li>&#9989; Playgroups sponsored by <strong>KuriUser</strong></li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="logo-badge footer__logo-badge">DCC</div>
+          <p><strong>Dominion Chihuahua Club Inc</strong><br>Canterbury, New Zealand &middot; Est. 1964</p>
+          <p class="footer__sponsor">Playgroups proudly sponsored by <strong>KuriUser</strong></p>
+        </div>
+        <div>
+          <h5>Quick Links</h5>
+          <ul class="footer__links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#breed">Breed Standard</a></li>
+            <li><a href="index.html#playgroups">Playgroups</a></li>
+            <li><a href="index.html#events">Events</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="index.html#resources">Resources</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact Us</h5>
+          <p>Canterbury, New Zealand</p>
+          <a href="mailto:membership@dominionchiclub.com">membership@dominionchiclub.com</a>
+          <p class="footer__tagline">Playgroup updates &amp; event photos &#128247;</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dominion Chihuahua Club Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/join.js"></script>
+</body>
+</html>
