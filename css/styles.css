@@ -617,6 +617,42 @@ ul  { list-style: none; }
   color: #FF7A00;
 }
 
+/* ===== PLAYGROUP GALLERY ===== */
+.pg-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+  margin-bottom: 3rem;
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.pg-gallery__item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+.pg-gallery__item--wide {
+  grid-column: span 2;
+}
+.pg-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.pg-gallery__item:hover img {
+  transform: scale(1.04);
+}
+@media (max-width: 700px) {
+  .pg-gallery { grid-template-columns: repeat(2, 1fr); }
+  .pg-gallery__item--wide { grid-column: span 2; }
+}
+@media (max-width: 480px) {
+  .pg-gallery { grid-template-columns: 1fr; }
+  .pg-gallery__item--wide { grid-column: span 1; }
+}
+
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
