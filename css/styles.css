@@ -546,10 +546,8 @@ ul  { list-style: none; }
 .coat-card:hover::before { transform: scaleX(1); }
 
 .coat-photo {
-  height: 280px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 360px;
+  background: var(--cream);
 }
 
 .coat-info { padding: 1.5rem; }
@@ -992,7 +990,6 @@ ul  { list-style: none; }
    IMAGE HELPERS
    ============================================================ */
 .bento-img,
-.coat-img,
 .event-img {
   position: absolute;
   inset: 0;
@@ -1000,6 +997,17 @@ ul  { list-style: none; }
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.coat-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: var(--cream);
 }
 
 .coat-photo,

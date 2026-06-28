@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Sponsor: Kuri &mdash; Dominion Chihuahua Club Inc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .kuri-hero-logo {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+      border-radius: var(--r);
+      display: block;
+      margin: 0 auto 2rem;
+    }
+    .kuri-quote {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--dark);
+      text-align: center;
+      line-height: 1.6;
+      position: relative;
+      padding: 0 2rem;
+    }
+    .kuri-quote::before,
+    .kuri-quote::after {
+      content: '\201C';
+      font-size: 4rem;
+      color: var(--red);
+      line-height: 0;
+      vertical-align: -.5em;
+      font-family: var(--serif);
+      opacity: .35;
+    }
+    .kuri-quote::after { content: '\201D'; }
+    .kuri-services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .kuri-service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .kuri-service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--red), var(--green));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+    }
+    .kuri-service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .kuri-service-card:hover::before { transform: scaleX(1); }
+    .kuri-service-icon { font-size: 2.5rem; margin-bottom: .75rem; display: block; }
+    .kuri-service-title { font-family: var(--serif); font-size: 1.1rem; color: var(--dark); margin-bottom: .5rem; }
+    .kuri-service-desc { font-size: .875rem; color: var(--muted); line-height: 1.6; }
+    .kuri-cta-band {
+      background: #000;
+      color: #fff;
+      padding: 5rem 0;
+      text-align: center;
+    }
+    .kuri-cta-band img { width: 120px; margin-bottom: 1.5rem; border-radius: var(--r-sm); }
+    .kuri-cta-band h2 { font-family: var(--serif); font-size: 2rem; margin-bottom: 1rem; color: #fff; }
+    .kuri-cta-band p { color: rgba(255,255,255,.75); max-width: 560px; margin: 0 auto 2rem; line-height: 1.7; }
+    .btn--kuri {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: #CE1126;
+      color: #fff;
+      padding: .85rem 2rem;
+      border-radius: var(--r-sm);
+      font-weight: 600;
+      font-size: .95rem;
+      text-decoration: none;
+      transition: background .2s, transform .2s;
+    }
+    .btn--kuri:hover { background: #a50e1e; transform: translateY(-2px); }
+    .partnership-band {
+      background: var(--red);
+      color: var(--white);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .partnership-band h2 { font-family: var(--serif); font-size: 2rem; margin-bottom: 1rem; }
+    .partnership-band p { max-width: 600px; margin: 0 auto; line-height: 1.75; opacity: .92; font-size: 1.05rem; }
+    @media (max-width: 768px) {
+      .kuri-services-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .kuri-services-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header id="site-header">
+    <nav class="nav container">
+      <a href="index.html#home" class="nav__logo">
+        <img src="assets/images/logo.jpg" alt="Dominion Chihuahua Club" class="nav__logo-img" />
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html#home">Home</a></li>
+        <li class="nav__item">
+          <button class="nav__dropdown-btn" aria-expanded="false">About</button>
+          <ul class="nav__submenu">
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="agm.html">AGM</a></li>
+          </ul>
+        </li>
+        <li><a href="breed-standard.html">Breed</a></li>
+        <li><a href="index.html#playgroups">Playgroups</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="index.html#resources">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container" style="text-align:center;">
+        <img src="assets/images/kuri-logo.jpg" alt="Kuri — We Love Dogs" class="kuri-hero-logo" />
+        <span class="eyebrow">Official Playgroup Partner</span>
+        <h1>Thank You, Kuri</h1>
+        <p>Kuri are the proud sponsors of our weekly Saturday Playgroup &mdash; providing not only their generous support, but the very building where our Chihuahuas gather every week. Without Kuri, there would be no playgroup.</p>
+      </div>
+    </section>
+
+    <!-- ===== PARTNERSHIP STATEMENT ===== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="kuri-quote reveal">
+          Without Kuri&rsquo;s incredible generosity &mdash; their space, their support, and their genuine love of dogs &mdash; our weekly playgroup simply would not exist. They are far more than a sponsor; they are the heart of our community.
+        </div>
+        <div class="about__grid reveal" style="max-width:900px; margin:0 auto;">
+          <div>
+            <span class="eyebrow">Our Partnership</span>
+            <h2>The Home of Our Playgroup</h2>
+            <p style="margin-bottom:1rem;">Every Saturday from 10:00 am to 11:30 am, the Dominion Chihuahua Club gathers at <strong>Kuri&rsquo;s facility</strong> in Canterbury for our beloved weekly playgroup. Kuri generously make their building available to us, giving our members and their Chihuahuas a safe, warm, and welcoming space to socialise and play.</p>
+            <p style="margin-bottom:1rem;">This partnership is something we treasure deeply. Running a regular playgroup requires a reliable venue, and Kuri provide that &mdash; week after week &mdash; entirely out of their commitment to the wellbeing of dogs and the communities that love them.</p>
+            <p>We encourage every DCC member and visitor to support Kuri in return. When you need dog care services in Canterbury, <strong>Kuri should be your first call</strong>.</p>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:center;">
+            <div style="text-align:center; padding:2rem; background:var(--white); border:1px solid var(--border); border-radius:var(--r); box-shadow:var(--shadow-md);">
+              <img src="assets/images/kuri-logo.jpg" alt="Kuri We Love Dogs" style="width:140px; border-radius:var(--r-sm); margin-bottom:1rem;" />
+              <p style="font-weight:700; font-size:1.1rem; color:var(--dark); margin-bottom:.25rem;">Kuri</p>
+              <p style="font-size:.85rem; color:var(--muted); margin-bottom:1.25rem;">We Love Dogs</p>
+              <a href="https://kuri.co.nz/" target="_blank" rel="noopener" class="btn btn--primary">Visit kuri.co.nz</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="eyebrow">What Kuri Offer</span>
+          <h2>Dog Care You Can Trust</h2>
+          <p class="section__desc">Kuri are dedicated to the health, happiness, and wellbeing of dogs across New Zealand. Their team of passionate dog lovers offer a range of professional services designed to give your dog the very best.</p>
+        </div>
+
+        <div class="kuri-services-grid reveal">
+
+          <div class="kuri-service-card">
+            <span class="kuri-service-icon">&#127968;</span>
+            <h3 class="kuri-service-title">Boarding &amp; Daycare</h3>
+            <p class="kuri-service-desc">Safe, comfortable boarding and daycare so your dog is happy and cared for while you&rsquo;re away. Kuri&rsquo;s facilities are purpose-built for dog wellbeing.</p>
+          </div>
+
+          <div class="kuri-service-card">
+            <span class="kuri-service-icon">&#9996;&#65039;</span>
+            <h3 class="kuri-service-title">Grooming</h3>
+            <p class="kuri-service-desc">Professional grooming services to keep your dog looking and feeling their best &mdash; from a quick tidy-up to a full groom.</p>
+          </div>
+
+          <div class="kuri-service-card">
+            <span class="kuri-service-icon">&#128149;</span>
+            <h3 class="kuri-service-title">Community &amp; Events</h3>
+            <p class="kuri-service-desc">Kuri believe in building dog-loving communities. Their generous support of our DCC Playgroup is a perfect example of that commitment in action.</p>
+          </div>
+
+          <div class="kuri-service-card">
+            <span class="kuri-service-icon">&#128293;</span>
+            <h3 class="kuri-service-title">Expert Team</h3>
+            <p class="kuri-service-desc">Kuri&rsquo;s staff are dog people first and foremost &mdash; passionate, knowledgeable, and dedicated to every dog that comes through their doors.</p>
+          </div>
+
+          <div class="kuri-service-card">
+            <span class="kuri-service-icon">&#128737;&#65039;</span>
+            <h3 class="kuri-service-title">Safe Facilities</h3>
+            <p class="kuri-service-desc">Kuri&rsquo;s premises are secure, clean, and designed with dogs in mind &mdash; the same welcoming space where our Chihuahuas play every Saturday.</p>
+          </div>
+
+          <div class="kuri-service-card">
+            <span class="kuri-service-icon">&#127758;</span>
+            <h3 class="kuri-service-title">Canterbury-Based</h3>
+            <p class="kuri-service-desc">Proudly local to Canterbury, New Zealand &mdash; Kuri are part of the same community as our club members, sharing a genuine love of dogs and the people who cherish them.</p>
+          </div>
+
+        </div>
+
+        <div class="section__cta reveal" style="text-align:center; margin-top:3rem;">
+          <p style="color:var(--muted); margin-bottom:1.25rem; font-size:.95rem;">Visit Kuri&rsquo;s website to see their full range of services and to get in touch.</p>
+          <a href="https://kuri.co.nz/" target="_blank" rel="noopener" class="btn btn--primary">Explore Kuri &rarr;</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== PARTNERSHIP BAND ===== -->
+    <section class="partnership-band">
+      <div class="container">
+        <h2>Without Kuri, There Is No Playgroup</h2>
+        <p>The Dominion Chihuahua Club is proud and deeply grateful to have Kuri as our Official Playgroup Partner. Every Saturday that our dogs run, socialise, and thrive is made possible by Kuri&rsquo;s generosity. Please support them &mdash; they truly love dogs.</p>
+      </div>
+    </section>
+
+    <!-- ===== KURI CTA ===== -->
+    <section class="kuri-cta-band">
+      <div class="container">
+        <img src="assets/images/kuri-logo.jpg" alt="Kuri" />
+        <h2>Visit Kuri Online</h2>
+        <p>Discover all that Kuri has to offer your dog &mdash; from daycare and boarding to grooming and more. Canterbury&rsquo;s dog care specialists.</p>
+        <a href="https://kuri.co.nz/" target="_blank" rel="noopener" class="btn--kuri">&#128062;&nbsp; Visit kuri.co.nz</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <img src="assets/images/logo.jpg" alt="Dominion Chihuahua Club" class="footer__logo-img" />
+          <p><strong>Dominion Chihuahua Club Inc</strong><br>Canterbury, New Zealand &middot; Est. 1964</p>
+          <p class="footer__sponsor">Playgroups proudly sponsored by <strong><a href="kuri.html" style="color:inherit;">Kuri</a></strong></p>
+        </div>
+        <div>
+          <h5>Quick Links</h5>
+          <ul class="footer__links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="agm.html">AGM</a></li>
+            <li><a href="breed-standard.html">Breed Standard</a></li>
+            <li><a href="index.html#playgroups">Playgroups</a></li>
+            <li><a href="index.html#events">Events</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="kuri.html">Our Sponsor: Kuri</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact Us</h5>
+          <p>Canterbury, New Zealand</p>
+          <a href="mailto:dominionchiclub@gmail.com">dominionchiclub@gmail.com</a>
+          <p class="footer__tagline">Playgroup updates &amp; event photos &#128247;</p>
+        </div>
+      </div>
+      <div class="footer__sponsors">
+        <span class="footer__sponsors-label">Sponsors &amp; Partners</span>
+        <a class="sponsor-tile" href="kuri.html">Kuri &mdash; Official Playgroup Partner</a>
+        <a class="sponsor-tile" href="https://www.dogsnz.org.nz" target="_blank" rel="noopener">Dogs New Zealand</a>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dominion Chihuahua Club Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
