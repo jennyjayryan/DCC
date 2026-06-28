@@ -45,9 +45,64 @@
     <!-- ===== PAGE HERO ===== -->
     <section class="page-hero">
       <div class="container">
-        <span class="eyebrow">Membership Application</span>
+        <span class="eyebrow">Membership</span>
         <h1>Join the Dominion Chihuahua Club</h1>
-        <p>Fill in the form below and pay your annual membership fee via Stripe or bank transfer. We&rsquo;ll confirm your membership within 2&ndash;3 business days.</p>
+        <p>Join a welcoming community of Chihuahua lovers &mdash; pet owners, show competitors, and breed enthusiasts. Annual membership is <strong>$20</strong>, renewable each <strong>1 April</strong>.</p>
+      </div>
+    </section>
+
+    <!-- ===== HOW TO JOIN ===== -->
+    <section class="section section--alt" style="padding:4rem 0;">
+      <div class="container">
+        <div class="section__header" style="margin-bottom:2.5rem;">
+          <span class="eyebrow">Getting Started</span>
+          <h2>How to Join</h2>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; max-width:900px; margin:0 auto 2.5rem;">
+          <div style="text-align:center;">
+            <div style="width:3rem;height:3rem;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin:0 auto .75rem;">1</div>
+            <strong style="display:block;margin-bottom:.35rem;color:var(--dark);">Fill in the Form</strong>
+            <p style="font-size:.85rem;color:var(--muted);">Complete the membership application below with your details.</p>
+          </div>
+          <div style="text-align:center;">
+            <div style="width:3rem;height:3rem;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin:0 auto .75rem;">2</div>
+            <strong style="display:block;margin-bottom:.35rem;color:var(--dark);">Pay $20</strong>
+            <p style="font-size:.85rem;color:var(--muted);">Pay via Stripe or bank transfer to Kiwibank 38-9025-0374077-00 using reference <em>Surname&nbsp;Subs</em>.</p>
+          </div>
+          <div style="text-align:center;">
+            <div style="width:3rem;height:3rem;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin:0 auto .75rem;">3</div>
+            <strong style="display:block;margin-bottom:.35rem;color:var(--dark);">Committee Approval</strong>
+            <p style="font-size:.85rem;color:var(--muted);">Your application is reviewed at the next committee meeting.</p>
+          </div>
+          <div style="text-align:center;">
+            <div style="width:3rem;height:3rem;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin:0 auto .75rem;">4</div>
+            <strong style="display:block;margin-bottom:.35rem;color:var(--dark);">Welcome!</strong>
+            <p style="font-size:.85rem;color:var(--muted);">We&rsquo;ll send a confirmation email and add you to the members register.</p>
+          </div>
+        </div>
+        <div style="max-width:640px;margin:0 auto;background:var(--white);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;">
+          <table style="width:100%;border-collapse:collapse;font-size:.9rem;">
+            <thead>
+              <tr style="background:var(--dark);color:#fff;">
+                <th style="padding:.75rem 1.25rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Type</th>
+                <th style="padding:.75rem 1.25rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Cost</th>
+                <th style="padding:.75rem 1.25rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Renewal</th>
+                <th style="padding:.75rem 1.25rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Requirement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:.85rem 1.25rem;border-bottom:1px solid var(--border);">Single Membership</td>
+                <td style="padding:.85rem 1.25rem;border-bottom:1px solid var(--border);font-weight:700;color:var(--red);">$20 / year</td>
+                <td style="padding:.85rem 1.25rem;border-bottom:1px solid var(--border);">1 April annually</td>
+                <td style="padding:.85rem 1.25rem;border-bottom:1px solid var(--border);">Committee review</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="text-align:center;font-size:.82rem;color:var(--muted);margin-top:1.25rem;max-width:600px;margin-left:auto;margin-right:auto;">
+          All members must abide by the <a href="assets/documents/constitution.pdf" target="_blank" style="color:var(--green);">DCC Constitution</a> and the <a href="https://www.dogsnz.org.nz" target="_blank" rel="noopener" style="color:var(--green);">Dogs New Zealand Code of Ethics</a>. The Dominion Chihuahua Club Inc is affiliated with Dogs New Zealand but is an independent incorporated society &mdash; Dogs New Zealand accepts no liability for club activities.
+        </p>
       </div>
     </section>
 
@@ -294,10 +349,10 @@
                   <dt>Amount</dt>
                   <dd>$20.00</dd>
                   <dt>Reference</dt>
-                  <dd id="bank-reference">MEMBERSHIP &ndash; [Your Name]</dd>
+                  <dd id="bank-reference">[Surname] Subs</dd>
                 </dl>
                 <p style="font-size:.8rem;color:var(--muted);margin-top:.75rem;">
-                  Please use your full name as the payment reference so we can match your payment.
+                  Use your surname followed by &ldquo;Subs&rdquo; as the reference &mdash; e.g. <strong>Smith Subs</strong>.
                 </p>
               </div>
             </div>
@@ -306,12 +361,13 @@
             <div class="payment-card">
               <h3>&#127775; Member Benefits</h3>
               <ul style="display:flex;flex-direction:column;gap:.6rem;font-size:.9rem;color:var(--muted);">
-                <li>&#9989; Weekly playgroup access &mdash; $5 per adult</li>
+                <li>&#9989; Weekly playgroup access &mdash; $5 per adult (members rate)</li>
+                <li>&#9989; Discounted championship show entry fees</li>
+                <li>&#9989; Exclusive member-only social events</li>
                 <li>&#9989; Club newsletter &amp; breed updates</li>
-                <li>&#9989; Discounted show entry fees</li>
                 <li>&#9989; Access to breeder referrals</li>
-                <li>&#9989; Supportive community of owners</li>
-                <li>&#9989; Playgroups sponsored by <strong><a href="kuri.html" style="color:inherit;">Kuri</a></strong></li>
+                <li>&#9989; 60+ year community of Chihuahua enthusiasts</li>
+                <li>&#9989; Playgroups at <strong><a href="kuri.html" style="color:inherit;">Kuri</a></strong>, Phillipstown</li>
               </ul>
             </div>
 

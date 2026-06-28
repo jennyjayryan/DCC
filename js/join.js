@@ -50,9 +50,10 @@ if (dateField) {
 
 // ---- Update bank reference as name is typed ----
 function updateBankReference() {
-  const name = document.getElementById('j-name')?.value.trim() || '[Your Name]';
-  const el   = document.getElementById('bank-reference');
-  if (el) el.textContent = `MEMBERSHIP â€“ ${name}`;
+  const fullName = document.getElementById('j-name')?.value.trim() || '';
+  const surname  = fullName.split(' ').filter(Boolean).pop() || '[Surname]';
+  const el       = document.getElementById('bank-reference');
+  if (el) el.textContent = `${surname} Subs`;
 }
 document.getElementById('j-name')?.addEventListener('input', updateBankReference);
 
