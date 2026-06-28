@@ -1,5 +1,5 @@
-// ============================================================
-// Dominion Chihuahua Club – join.js
+﻿// ============================================================
+// Dominion Chihuahua Club â€“ join.js
 // ============================================================
 
 // ---- Sticky header shadow ----
@@ -34,7 +34,7 @@ document.addEventListener('click', () => {
 });
 
 // ============================================================
-// MEMBERSHIP FEE — update to your actual annual fee e.g. 40
+// MEMBERSHIP FEE â€” update to your actual annual fee e.g. 40
 // ============================================================
 const MEMBERSHIP_FEE = '20';
 
@@ -52,7 +52,7 @@ if (dateField) {
 function updateBankReference() {
   const name = document.getElementById('j-name')?.value.trim() || '[Your Name]';
   const el   = document.getElementById('bank-reference');
-  if (el) el.textContent = `MEMBERSHIP – ${name}`;
+  if (el) el.textContent = `MEMBERSHIP â€“ ${name}`;
 }
 document.getElementById('j-name')?.addEventListener('input', updateBankReference);
 
@@ -118,14 +118,14 @@ document.querySelectorAll('.pmethod').forEach(pm => {
 // BUILD EMAIL BODY
 // ============================================================
 function buildEmailBody(form) {
-  const v = name => form.elements[name]?.value.trim() || '—';
+  const v = name => form.elements[name]?.value.trim() || 'â€”';
 
   const payMethod = form.querySelector('.pmethod.selected')?.dataset.method === 'bank'
     ? 'Bank Transfer'
     : 'Stripe';
 
   const dogNames = Array.from(document.querySelectorAll('.dog-entry input'))
-    .map((inp, i) => `  Dog ${i + 1}: ${inp.value.trim() || '—'}`)
+    .map((inp, i) => `  Dog ${i + 1}: ${inp.value.trim() || 'â€”'}`)
     .join('\n');
 
   const declarations = [
@@ -156,7 +156,7 @@ ${declarations}
 PAYMENT
   Method:    ${payMethod}
   Fee:       $${MEMBERSHIP_FEE}.00 NZD per year
-  Confirmed: ${form.elements['paymentConfirmed']?.checked ? 'Yes – payment completed' : 'Not yet confirmed'}
+  Confirmed: ${form.elements['paymentConfirmed']?.checked ? 'Yes â€“ payment completed' : 'Not yet confirmed'}
 
 ============================================================
 Submitted online via dominionchihuahuaclub website.
@@ -170,7 +170,7 @@ OFFICE USE ONLY
 }
 
 // ============================================================
-// FORM SUBMIT → MAILTO
+// FORM SUBMIT â†’ MAILTO
 // ============================================================
 const form = document.getElementById('application-form');
 
@@ -193,11 +193,11 @@ form?.addEventListener('submit', e => {
   }
 
   const name    = form.elements['fullName'].value.trim();
-  const subject = `New Member Application – ${name}`;
+  const subject = `New Member Application â€“ ${name}`;
   const body    = buildEmailBody(form);
 
-  // EMAIL DESTINATION — update if the inbox address changes
-  const TO     = 'membership@dominionchiclub.com';
+  // EMAIL DESTINATION â€” update if the inbox address changes
+  const TO     = 'dominionchiclub@gmail.com';
   const mailto = `mailto:${TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
   const link = document.createElement('a');
@@ -212,3 +212,4 @@ form?.addEventListener('submit', e => {
   success.classList.add('visible');
   success.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+

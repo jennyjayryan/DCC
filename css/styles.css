@@ -1705,3 +1705,59 @@ ul  { list-style: none; }
 @media (max-width: 480px) {
   .doc-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   BREED STANDARD PAGE
+   ============================================================ */
+
+.standard-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.standard-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  border-bottom: 1px solid var(--border);
+}
+
+.standard-row:last-child { border-bottom: none; }
+
+.standard-row__label {
+  padding: 1rem 1.25rem;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--white);
+  background: var(--dark);
+  display: flex;
+  align-items: flex-start;
+}
+
+.standard-row__body {
+  padding: 1rem 1.5rem;
+  font-size: .925rem;
+  color: var(--text);
+  line-height: 1.65;
+  background: var(--white);
+}
+
+.standard-row--highlight .standard-row__label { background: var(--red); }
+.standard-row--highlight .standard-row__body  { background: #fff8f8; font-weight: 500; }
+
+@media (max-width: 600px) {
+  .standard-row { grid-template-columns: 1fr; }
+  .standard-row__label {
+    padding: .6rem 1rem;
+    border-radius: 0;
+  }
+  .standard-row__body { padding: .85rem 1rem; }
+}
