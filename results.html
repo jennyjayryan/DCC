@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Show Results &mdash; Dominion Chihuahua Club Inc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header id="site-header">
+    <nav class="nav container">
+      <a href="index.html#home" class="nav__logo">
+        <img src="assets/images/logo.jpg" alt="Dominion Chihuahua Club" class="nav__logo-img" />
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html#home">Home</a></li>
+        <li class="nav__item">
+          <button class="nav__dropdown-btn" aria-expanded="false">About</button>
+          <ul class="nav__submenu">
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="agm.html">AGM</a></li>
+          </ul>
+        </li>
+        <li><a href="breed-standard.html">Breed</a></li>
+        <li><a href="index.html#playgroups">Playgroups</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="index.html#resources">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Championship Shows</span>
+        <h1>Show Results</h1>
+        <p>Results from Dominion Chihuahua Club championship and open shows, sanctioned by Dogs New Zealand.</p>
+      </div>
+    </section>
+
+    <!-- ===== 2026 RESULTS ===== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="agm-year-header reveal">
+          <span class="agm-year-badge">2026</span>
+          <span class="agm-year-title">Championship Show</span>
+        </div>
+
+        <!--
+          HOW TO ADD RESULTS:
+          Replace the .results-pending div below with a .results-table table.
+          Example structure shown in the commented block further below.
+        -->
+        <div class="results-pending reveal">
+          &#127942; Results will be published here after the 2026 Championship Show.
+        </div>
+
+        <!--
+          EXAMPLE — uncomment and fill in when results are available:
+
+          <div class="reveal" style="overflow-x:auto;">
+            <table class="results-table">
+              <thead>
+                <tr>
+                  <th>Award</th>
+                  <th>Class</th>
+                  <th>Dog / Registered Name</th>
+                  <th>Owner / Handler</th>
+                  <th>Breeder</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="award-badge award-badge--gold">Best in Show</span></td>
+                  <td>Open Dog</td>
+                  <td>Kitaco Supreme</td>
+                  <td>Jenny Ryan</td>
+                  <td>Jenny Ryan</td>
+                </tr>
+                <tr>
+                  <td><span class="award-badge award-badge--silver">Reserve BIS</span></td>
+                  <td>Open Bitch</td>
+                  <td>Kitaco Golden Girl</td>
+                  <td>Tracey Tonkin</td>
+                  <td>Jenny Ryan</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        -->
+
+      </div>
+    </section>
+
+    <!-- ===== PREVIOUS YEARS ===== -->
+    <section class="section section--alt">
+      <div class="container">
+
+        <div class="section__header reveal" style="text-align:left; margin-bottom:2rem;">
+          <span class="eyebrow">Archive</span>
+          <h2>Previous Show Results</h2>
+        </div>
+
+        <!-- 2025 -->
+        <div class="agm-year-header reveal">
+          <span class="agm-year-badge">2025</span>
+          <span class="agm-year-title">Championship Show</span>
+        </div>
+
+        <div class="results-pending reveal" style="margin-bottom:2.5rem;">
+          &#127942; Results not yet uploaded. See above for how to add them.
+        </div>
+
+        <!-- 2024 -->
+        <div class="agm-year-header reveal">
+          <span class="agm-year-badge">2024</span>
+          <span class="agm-year-title">Championship Show</span>
+        </div>
+
+        <div class="results-pending reveal">
+          &#127942; Results not yet uploaded.
+        </div>
+
+        <!--
+          HOW TO ADD PAST RESULTS:
+          Copy the same .results-table pattern into each year block above.
+          Save results as a PDF in assets/documents/results/ and optionally add a
+          download link:
+          <a href="assets/documents/results/2025-results.pdf" class="btn btn--outline-dark btn--sm" style="margin-top:1rem;">Download Full Results PDF</a>
+        -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <img src="assets/images/logo.jpg" alt="Dominion Chihuahua Club" class="footer__logo-img" />
+          <p><strong>Dominion Chihuahua Club Inc</strong><br>Canterbury, New Zealand &middot; Est. 1964</p>
+          <p class="footer__sponsor">Playgroups proudly sponsored by <strong><a href="kuri.html" style="color:inherit;">Kuri</a></strong></p>
+        </div>
+        <div>
+          <h5>Quick Links</h5>
+          <ul class="footer__links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="agm.html">AGM</a></li>
+            <li><a href="breed-standard.html">Breed Standard</a></li>
+            <li><a href="results.html" class="active">Show Results</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="join.html">Join</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact Us</h5>
+          <p>Canterbury, New Zealand</p>
+          <a href="mailto:dominionchiclub@gmail.com">dominionchiclub@gmail.com</a>
+          <p class="footer__tagline" style="margin-top:.6rem;"><a href="https://www.facebook.com/groups/httpssnappingturtlesite.wixsite.comdominionchi" target="_blank" rel="noopener" style="color:var(--green); font-weight:600;">&#128077; Follow us on Facebook</a></p>
+        </div>
+      </div>
+      <div class="footer__sponsors">
+        <span class="footer__sponsors-label">Sponsors &amp; Partners</span>
+        <a class="sponsor-tile" href="kuri.html">Kuri &mdash; Official Playgroup Partner</a>
+        <a class="sponsor-tile" href="https://www.dogsnz.org.nz" target="_blank" rel="noopener">Dogs New Zealand</a>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dominion Chihuahua Club Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
