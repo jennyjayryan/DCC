@@ -206,8 +206,9 @@ ul  { list-style: none; }
 .hero__bg {
   position: absolute;
   inset: 0;
-  /* ↓ REPLACE: background-image: url('assets/images/hero.jpg'); background-size: cover; background-position: center; */
-  background: linear-gradient(135deg, #006847 0%, #1a6b4a 20%, #8B0D1A 60%, #CE1126 100%);
+  background-image: url('../assets/images/hero.jpg');
+  background-size: cover;
+  background-position: center top;
   transform: scale(1.05);
   transition: transform 8s ease;
 }
