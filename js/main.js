@@ -129,19 +129,8 @@ async function loadChihuahuaImages() {
       heroBg.style.backgroundPosition = 'center';
     }
 
-    // Helper: set img src and reveal on load
-    function applyImg(img, url) {
-      if (!img) return;
-      img.style.opacity = '0';
-      img.style.transition = 'opacity .6s';
-      img.onload = () => { img.style.opacity = '1'; };
-      img.src = url;
-    }
+    // Hero background only — real photos will replace other placeholders
 
-    document.querySelectorAll('.bento-img').forEach(img  => applyImg(img, next()));
-    document.querySelectorAll('.coat-img').forEach(img   => applyImg(img, next()));
-    document.querySelectorAll('.event-img').forEach(img  => applyImg(img, next()));
-    document.querySelectorAll('.join-cta__chi').forEach(img => applyImg(img, next()));
 
   } catch (_) {
     // Keep gradient fallbacks silently
