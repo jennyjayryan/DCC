@@ -1437,12 +1437,12 @@ ul  { list-style: none; }
 }
 
 .logo-visual__img {
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
+  width: 360px;
+  height: 360px;
+  border-radius: 8px;
   object-fit: contain;
   background: var(--white);
-  padding: .25rem;
+  padding: 0;
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border);
 }
