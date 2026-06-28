@@ -620,7 +620,7 @@ ul  { list-style: none; }
 /* ===== PLAYGROUP GALLERY ===== */
 .pg-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: .5rem;
   margin-bottom: 3rem;
   border-radius: var(--r);
@@ -643,10 +643,6 @@ ul  { list-style: none; }
 }
 .pg-gallery__item:hover img {
   transform: scale(1.04);
-}
-@media (max-width: 700px) {
-  .pg-gallery { grid-template-columns: repeat(2, 1fr); }
-  .pg-gallery__item--wide { grid-column: span 2; }
 }
 @media (max-width: 480px) {
   .pg-gallery { grid-template-columns: 1fr; }
