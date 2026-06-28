@@ -109,35 +109,7 @@ joinForm?.addEventListener('submit', e => {
   }, 4000);
 });
 
-// --- Chihuahua placeholder images via Dog CEO API ---
-async function loadChihuahuaImages() {
-  try {
-    const res  = await fetch('https://dog.ceo/api/breed/chihuahua/images/random/15');
-    const data = await res.json();
-    if (data.status !== 'success') return;
-
-    const pool = data.message;
-    let i = 0;
-    const next = () => pool[i++ % pool.length];
-
-    // Hero background
-    const heroBg = document.querySelector('.hero__bg');
-    if (heroBg) {
-      const url = next();
-      heroBg.style.backgroundImage = `url('${url}')`;
-      heroBg.style.backgroundSize = 'cover';
-      heroBg.style.backgroundPosition = 'center';
-    }
-
-    // Hero background only — real photos will replace other placeholders
-
-
-  } catch (_) {
-    // Keep gradient fallbacks silently
-  }
-}
-
-loadChihuahuaImages();
+// Real photos are now used throughout — no API fetch needed.
 
 // --- Video placeholder ---
 document.querySelectorAll('.video-thumb').forEach(vp => {
