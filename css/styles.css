@@ -1949,3 +1949,11 @@ ul  { list-style: none; }
   .wwd-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* 4-column WWD override */
+@media (max-width: 1024px) {
+  .wwd-grid[style*="repeat(4"] { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 540px) {
+  .wwd-grid[style*="repeat(4"] { grid-template-columns: 1fr !important; }
+}

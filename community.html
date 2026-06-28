@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community &amp; Past Events &mdash; Dominion Chihuahua Club Inc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .event-past-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .event-past-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      position: relative;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .event-past-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--red), var(--green));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+    }
+    .event-past-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+    .event-past-card:hover::before { transform: scaleX(1); }
+    .event-past-photo {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: var(--cream);
+    }
+    .event-past-photo-placeholder {
+      width: 100%;
+      height: 220px;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: .5rem;
+      color: var(--muted);
+      font-size: .8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .event-past-body { padding: 1.5rem; }
+    .event-past-date {
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--red);
+      margin-bottom: .4rem;
+    }
+    .event-past-title {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--dark);
+      margin-bottom: .6rem;
+    }
+    .event-past-desc {
+      font-size: .875rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .event-past-gallery-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--green);
+      margin-top: 1rem;
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .event-past-gallery-link:hover { color: var(--red); }
+    .event-pending-note {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--muted);
+      font-style: italic;
+      background: var(--cream);
+      border-radius: var(--r);
+      border: 1.5px dashed var(--border);
+      grid-column: 1 / -1;
+    }
+    @media (max-width: 700px) {
+      .event-past-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header id="site-header">
+    <nav class="nav container">
+      <a href="index.html#home" class="nav__logo">
+        <img src="assets/images/logo.jpg" alt="Dominion Chihuahua Club" class="nav__logo-img" />
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html#home">Home</a></li>
+        <li class="nav__item">
+          <button class="nav__dropdown-btn" aria-expanded="false">About</button>
+          <ul class="nav__submenu">
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="agm.html">AGM</a></li>
+          </ul>
+        </li>
+        <li><a href="breed-standard.html">Breed</a></li>
+        <li><a href="index.html#playgroups">Playgroups</a></li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="index.html#resources">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Club Life</span>
+        <h1>Community &amp; Past Events</h1>
+        <p>A look back at the gatherings, fun days, and special moments that make the Dominion Chihuahua Club such a special community.</p>
+      </div>
+    </section>
+
+    <!-- ===== 2026 ===== -->
+    <section class="section">
+      <div class="container">
+
+        <div class="agm-year-header reveal">
+          <span class="agm-year-badge">2026</span>
+          <span class="agm-year-title">Events</span>
+        </div>
+
+        <div class="event-past-grid reveal">
+
+          <!--
+            HOW TO ADD A PAST EVENT:
+            1. Copy the event-past-card block below
+            2. Update the date, title, description
+            3. Add a photo: save to assets/images/ then replace the
+               .event-past-photo-placeholder div with:
+               <img class="event-past-photo" src="assets/images/your-photo.jpg" alt="Event name" />
+            4. Optionally link to the gallery: add an <a class="event-past-gallery-link"> tag
+          -->
+
+          <div class="event-past-card">
+            <div class="event-past-photo-placeholder">
+              <span style="font-size:2rem; opacity:.35;">&#127881;</span>
+              Add photo (see comment above)
+            </div>
+            <div class="event-past-body">
+              <div class="event-past-date">Date TBC &middot; 2026</div>
+              <h3 class="event-past-title">2026 Annual Specialty Show</h3>
+              <p class="event-past-desc">Our flagship event of the year &mdash; celebrating the very best of the Chihuahua breed in Canterbury. Add details and a photo once the event has taken place.</p>
+              <a href="results.html" class="event-past-gallery-link">View Show Results &rarr;</a>
+            </div>
+          </div>
+
+          <div class="event-past-card">
+            <div class="event-past-photo-placeholder">
+              <span style="font-size:2rem; opacity:.35;">&#127881;</span>
+              Add photo
+            </div>
+            <div class="event-past-body">
+              <div class="event-past-date">July 2026</div>
+              <h3 class="event-past-title">Winter Social Gathering</h3>
+              <p class="event-past-desc">A warm midwinter get-together for members and their Chihuahuas. Add a summary and photos after the event.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== 2025 ===== -->
+    <section class="section section--alt">
+      <div class="container">
+
+        <div class="agm-year-header reveal">
+          <span class="agm-year-badge">2025</span>
+          <span class="agm-year-title">Events</span>
+        </div>
+
+        <div class="event-past-grid reveal">
+
+          <div class="event-past-card">
+            <img class="event-past-photo" src="assets/images/show1.jpg" alt="2025 DCC Specialty Show" />
+            <div class="event-past-body">
+              <div class="event-past-date">2025 &middot; Canterbury</div>
+              <h3 class="event-past-title">2025 Specialty Show</h3>
+              <p class="event-past-desc">Another wonderful day celebrating the Chihuahua breed. Add a summary of results and highlights here.</p>
+              <a href="results.html" class="event-past-gallery-link">View Show Results &rarr;</a>
+            </div>
+          </div>
+
+          <!--
+            Add more 2025 events here using the same card pattern.
+          -->
+          <div class="event-past-card">
+            <div class="event-past-photo-placeholder">
+              <span style="font-size:2rem; opacity:.35;">&#128247;</span>
+              Add photo
+            </div>
+            <div class="event-past-body">
+              <div class="event-past-date">2025</div>
+              <h3 class="event-past-title">Add a 2025 Event</h3>
+              <p class="event-past-desc">Copy this card and fill in the details for any 2025 club event — social nights, fun days, breed education evenings.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="mission-band">
+      <div class="container" style="text-align:center;">
+        <p class="mission-band__text">Want to be part of the next event? <a href="join.html" style="color:#FFD700; text-decoration:underline; text-underline-offset:.25em;">Join the club today</a> &mdash; membership is just $20 a year.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <img src="assets/images/logo.jpg" alt="Dominion Chihuahua Club" class="footer__logo-img" />
+          <p><strong>Dominion Chihuahua Club Inc</strong><br>Canterbury, New Zealand &middot; Est. 1964</p>
+          <p class="footer__sponsor">Playgroups proudly sponsored by <strong><a href="kuri.html" style="color:inherit;">Kuri</a></strong></p>
+        </div>
+        <div>
+          <h5>Quick Links</h5>
+          <ul class="footer__links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="committee.html">Committee</a></li>
+            <li><a href="agm.html">AGM</a></li>
+            <li><a href="breed-standard.html">Breed Standard</a></li>
+            <li><a href="results.html">Show Results</a></li>
+            <li><a href="community.html" class="active">Community &amp; Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="join.html">Join</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact Us</h5>
+          <p>Canterbury, New Zealand</p>
+          <a href="mailto:dominionchiclub@gmail.com">dominionchiclub@gmail.com</a>
+          <p class="footer__tagline" style="margin-top:.6rem;"><a href="https://www.facebook.com/groups/httpssnappingturtlesite.wixsite.comdominionchi" target="_blank" rel="noopener" style="color:var(--green); font-weight:600;">&#128077; Follow us on Facebook</a></p>
+        </div>
+      </div>
+      <div class="footer__sponsors">
+        <span class="footer__sponsors-label">Sponsors &amp; Partners</span>
+        <a class="sponsor-tile" href="kuri.html">Kuri &mdash; Official Playgroup Partner</a>
+        <a class="sponsor-tile" href="https://www.dogsnz.org.nz" target="_blank" rel="noopener">Dogs New Zealand</a>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Dominion Chihuahua Club Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
