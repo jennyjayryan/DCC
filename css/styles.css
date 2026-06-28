@@ -1403,8 +1403,8 @@ ul  { list-style: none; }
 
 .logo-visual {
   position: relative;
-  width: 340px;
-  height: 340px;
+  width: 420px;
+  height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1437,12 +1437,12 @@ ul  { list-style: none; }
 }
 
 .logo-visual__img {
-  width: 300px;
-  height: 300px;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
   object-fit: contain;
   background: var(--white);
-  padding: .5rem;
+  padding: .25rem;
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border);
 }
