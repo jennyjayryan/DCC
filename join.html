@@ -32,8 +32,16 @@
           </ul>
         </li>
         <li><a href="index.html#breed">Breed</a></li>
-        <li><a href="index.html#playgroups">Playgroups</a></li>
+                <li class="nav__item">
+          <button class="nav__dropdown-btn" aria-expanded="false">Shows</button>
+          <ul class="nav__submenu">
+            <li><a href="results.html">Show Results</a></li>
+            <li><a href="show-classes.html">Show Classes</a></li>
+            <li><a href="breeders.html">Breeders</a></li>
+          </ul>
+        </li><li><a href="index.html#playgroups">Playgroups</a></li>
         <li><a href="index.html#events">Events</a></li>
+        <li><a href="breeders.html">Breeders</a></li>
         <li><a href="join.html" class="active">Join</a></li>
         <li><a href="index.html#resources">Resources</a></li>
       </ul>
@@ -84,24 +92,24 @@
           <table style="width:100%;border-collapse:collapse;font-size:.9rem;">
             <thead>
               <tr style="background:var(--dark);color:#fff;">
-                <th style="padding:.75rem 1.25rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Type</th>
+                <th style="padding:.75rem 1.25rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Membership</th>
                 <th style="padding:.75rem 1.25rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Cost</th>
                 <th style="padding:.75rem 1.25rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Renewal</th>
-                <th style="padding:.75rem 1.25rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Requirement</th>
+                <th style="padding:.75rem 1.25rem;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;">Eligibility</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style="padding:.85rem 1.25rem;border-bottom:1px solid var(--border);">Single Membership</td>
-                <td style="padding:.85rem 1.25rem;border-bottom:1px solid var(--border);font-weight:700;color:var(--red);">$20 / year</td>
-                <td style="padding:.85rem 1.25rem;border-bottom:1px solid var(--border);">1 April annually</td>
-                <td style="padding:.85rem 1.25rem;border-bottom:1px solid var(--border);">Committee review</td>
+                <td style="padding:.85rem 1.25rem;">Annual Membership</td>
+                <td style="padding:.85rem 1.25rem;font-weight:700;color:var(--red);">$20 / year</td>
+                <td style="padding:.85rem 1.25rem;">1 April annually</td>
+                <td style="padding:.85rem 1.25rem;">16 years or over &middot; Committee approval</td>
               </tr>
             </tbody>
           </table>
         </div>
         <p style="text-align:center;font-size:.82rem;color:var(--muted);margin-top:1.25rem;max-width:600px;margin-left:auto;margin-right:auto;">
-          All members must abide by the <a href="assets/documents/constitution.pdf" target="_blank" style="color:var(--green);">DCC Constitution</a> and the <a href="https://www.dogsnz.org.nz" target="_blank" rel="noopener" style="color:var(--green);">Dogs New Zealand Code of Ethics</a>. The Dominion Chihuahua Club Inc is affiliated with Dogs New Zealand but is an independent incorporated society &mdash; Dogs New Zealand accepts no liability for club activities.
+          Membership is open to anyone aged <strong>16 or over</strong>. All members must abide by the <a href="assets/documents/constitution.pdf" target="_blank" style="color:var(--green);">DCC Constitution</a> and the <a href="https://www.dogsnz.org.nz" target="_blank" rel="noopener" style="color:var(--green);">Dogs New Zealand Code of Ethics</a>. The Dominion Chihuahua Club Inc is affiliated with Dogs New Zealand but is an independent incorporated society &mdash; Dogs New Zealand accepts no liability for club activities.
         </p>
       </div>
     </section>
@@ -385,7 +393,7 @@
         <div>
           <img src="assets/images/logo.jpg" alt="Dominion Chihuahua Club" class="footer__logo-img" />
           <p><strong>Dominion Chihuahua Club Inc</strong><br>Canterbury, New Zealand &middot; Est. 1964</p>
-          <p class="footer__sponsor">Playgroups proudly sponsored by <strong>KuriUser</strong></p>
+          <p class="footer__sponsor">Playgroups proudly sponsored by <strong><a href="kuri.html" style="color:inherit;">Kuri</a></strong></p>
         </div>
         <div>
           <h5>Quick Links</h5>
@@ -395,9 +403,13 @@
             <li><a href="committee.html">Committee</a></li>
             <li><a href="agm.html">AGM</a></li>
             <li><a href="breed-standard.html">Breed Standard</a></li>
-            <li><a href="index.html#playgroups">Playgroups</a></li>
-            <li><a href="index.html#events">Events</a></li>
+            <li><a href="results.html">Show Results</a></li>
+            <li><a href="show-classes.html">Show Classes</a></li>
+            <li><a href="breeders.html">Breeders</a></li>
+            <li><a href="community.html">Community &amp; Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="join.html" class="active">Join</a></li>
+            <li><a href="kuri.html">Our Sponsor: Kuri</a></li>
           </ul>
         </div>
         <div>
@@ -406,6 +418,11 @@
           <a href="mailto:dominionchiclub@gmail.com">dominionchiclub@gmail.com</a>
           <p class="footer__tagline" style="margin-top:.6rem;"><a href="https://www.facebook.com/groups/httpssnappingturtlesite.wixsite.comdominionchi" target="_blank" rel="noopener" style="color:var(--green); font-weight:600;">&#128077; Follow us on Facebook</a></p>
         </div>
+      </div>
+      <div class="footer__sponsors">
+        <span class="footer__sponsors-label">Sponsors &amp; Partners</span>
+        <a class="sponsor-tile" href="kuri.html">Kuri &mdash; Official Playgroup Partner</a>
+        <a class="sponsor-tile" href="https://www.dogsnz.org.nz" target="_blank" rel="noopener">Dogs New Zealand</a>
       </div>
       <div class="footer__bottom">
         <p>&copy; 2026 Dominion Chihuahua Club Inc. All rights reserved.</p>
@@ -416,5 +433,6 @@
   <script src="js/join.js"></script>
 </body>
 </html>
+
 
 

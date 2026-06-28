@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-  <!-- ===== NAV ===== -->
   <header id="site-header">
     <nav class="nav container">
       <a href="index.html#home" class="nav__logo">
@@ -31,8 +29,17 @@
           </ul>
         </li>
         <li><a href="breed-standard.html">Breed</a></li>
+        <li class="nav__item">
+          <button class="nav__dropdown-btn" aria-expanded="false">Shows</button>
+          <ul class="nav__submenu">
+            <li><a href="results.html" class="active">Show Results</a></li>
+            <li><a href="show-classes.html">Show Classes</a></li>
+            <li><a href="breeders.html">Breeders</a></li>
+          </ul>
+        </li>
         <li><a href="index.html#playgroups">Playgroups</a></li>
         <li><a href="index.html#events">Events</a></li>
+        <li><a href="breeders.html">Breeders</a></li>
         <li><a href="join.html">Join</a></li>
         <li><a href="index.html#resources">Resources</a></li>
       </ul>
@@ -40,114 +47,240 @@
   </header>
 
   <main>
-
-    <!-- ===== PAGE HERO ===== -->
     <section class="page-hero">
       <div class="container">
-        <span class="eyebrow">Championship Shows</span>
+        <span class="eyebrow">Championship &amp; Open Shows</span>
         <h1>Show Results</h1>
-        <p>Results from Dominion Chihuahua Club championship and open shows, sanctioned by Dogs New Zealand.</p>
+        <p>Results from Dominion Chihuahua Club championship and open shows, sanctioned by Dogs New Zealand. Click any show to view full results.</p>
       </div>
     </section>
 
-    <!-- ===== 2026 RESULTS ===== -->
     <section class="section">
       <div class="container">
 
-        <div class="agm-year-header reveal">
-          <span class="agm-year-badge">2026</span>
-          <span class="agm-year-title">Championship Show</span>
+        <div class="section__header reveal">
+          <span class="eyebrow">2026</span>
+          <h2>Upcoming</h2>
+        </div>
+        <div class="results-pending reveal" style="margin-bottom:4rem;">
+          &#127942; The 2026 Championship Show date is to be confirmed. Results will be published here after the event.
         </div>
 
-        <!--
-          HOW TO ADD RESULTS:
-          Replace the .results-pending div below with a .results-table table.
-          Example structure shown in the commented block further below.
-        -->
-        <div class="results-pending reveal">
-          &#127942; Results will be published here after the 2026 Championship Show.
-        </div>
-
-        <!--
-          EXAMPLE — uncomment and fill in when results are available:
-
-          <div class="reveal" style="overflow-x:auto;">
-            <table class="results-table">
-              <thead>
-                <tr>
-                  <th>Award</th>
-                  <th>Class</th>
-                  <th>Dog / Registered Name</th>
-                  <th>Owner / Handler</th>
-                  <th>Breeder</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span class="award-badge award-badge--gold">Best in Show</span></td>
-                  <td>Open Dog</td>
-                  <td>Kitaco Supreme</td>
-                  <td>Jenny Ryan</td>
-                  <td>Jenny Ryan</td>
-                </tr>
-                <tr>
-                  <td><span class="award-badge award-badge--silver">Reserve BIS</span></td>
-                  <td>Open Bitch</td>
-                  <td>Kitaco Golden Girl</td>
-                  <td>Tracey Tonkin</td>
-                  <td>Jenny Ryan</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        -->
-
-      </div>
-    </section>
-
-    <!-- ===== PREVIOUS YEARS ===== -->
-    <section class="section section--alt">
-      <div class="container">
-
-        <div class="section__header reveal" style="text-align:left; margin-bottom:2rem;">
+        <div class="section__header reveal">
           <span class="eyebrow">Archive</span>
-          <h2>Previous Show Results</h2>
+          <h2>Past Shows</h2>
+          <p class="section__desc">Click any show card to view full results, awards, and placings.</p>
         </div>
 
-        <!-- 2025 -->
-        <div class="agm-year-header reveal">
-          <span class="agm-year-badge">2025</span>
-          <span class="agm-year-title">Championship Show</span>
+        <div class="show-cards-grid reveal">
+
+          <!-- 2023 -->
+          <a class="show-card" href="show-2023.html">
+            <div class="show-card__header show-card__header--champ">
+              <span class="show-card__badge">&#127942; Championship Show</span>
+              <span class="show-card__date">Jun 2023</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">June 2023 Championship Show</div>
+              <div class="show-card__bis-label">Best in Show</div>
+              <div class="show-card__bis-winner">CH Direktor Star of Heathcote</div>
+              <div class="show-card__link">View Full Results &rarr;</div>
+            </div>
+          </a>
+
+          <a class="show-card" href="show-2023.html#open">
+            <div class="show-card__header show-card__header--open">
+              <span class="show-card__badge">Open Show</span>
+              <span class="show-card__date">Jun 2023</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">June 2023 Open Show</div>
+              <div class="show-card__bis-label">Best in Show</div>
+              <div class="show-card__bis-winner">CH Direktor Star of Heathcote</div>
+              <div class="show-card__link">View Full Results &rarr;</div>
+            </div>
+          </a>
+
+          <!-- 2022 -->
+          <a class="show-card" href="show-2022-champ.html">
+            <div class="show-card__header show-card__header--champ">
+              <span class="show-card__badge">&#127942; Championship Show</span>
+              <span class="show-card__date">Nov 2022</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">November 2022 Championship Show</div>
+              <div class="show-card__bis-label">Best in Show</div>
+              <div class="show-card__bis-winner">NZ CH Kitaco Smashed Avocado</div>
+              <div class="show-card__link">View Full Results &rarr;</div>
+            </div>
+          </a>
+
+          <a class="show-card" href="show-2022-open.html">
+            <div class="show-card__header show-card__header--open">
+              <span class="show-card__badge">Open Show &amp; Ribbon Parade</span>
+              <span class="show-card__date">Jan 2022</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">January 2022 Open Show &amp; Ribbon Parade</div>
+              <div class="show-card__bis-label">Best in Show</div>
+              <div class="show-card__bis-winner">NZ CH Bramver&rsquo;s Twilight (Imp Japan)</div>
+              <div class="show-card__link">View Full Results &rarr;</div>
+            </div>
+          </a>
+
+          <!-- 2021 -->
+          <a class="show-card" href="show-2021.html">
+            <div class="show-card__header show-card__header--champ">
+              <span class="show-card__badge">&#127942; Championship &amp; Open Show</span>
+              <span class="show-card__date">May 2021</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">May 2021 Championship &amp; Open Show</div>
+              <div class="show-card__bis-label">Best in Show</div>
+              <div class="show-card__bis-winner">NZ CH Misty Meadow&rsquo;s Boston-PC (Imp Italy)</div>
+              <div class="show-card__link">View Full Results &rarr;</div>
+            </div>
+          </a>
+
+          <!-- 2019 -->
+          <a class="show-card" href="show-2019.html">
+            <div class="show-card__header show-card__header--champ">
+              <span class="show-card__badge">&#127942; Championship Show</span>
+              <span class="show-card__date">Jun 2019</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">June 2019 Championship Show</div>
+              <div class="show-card__bis-label">Best in Show</div>
+              <div class="show-card__bis-winner">NZ CH Payco&rsquo;s Tennessee Moonlight</div>
+              <div class="show-card__link">View Full Results &rarr;</div>
+            </div>
+          </a>
+
+          <a class="show-card" href="show-2019.html#oct">
+            <div class="show-card__header show-card__header--champ">
+              <span class="show-card__badge">&#127942; Championship Show</span>
+              <span class="show-card__date">Oct 2019</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">October 2019 Championship Show</div>
+              <div class="show-card__bis-label">Best in Show</div>
+              <div class="show-card__bis-winner" style="color:var(--muted);font-style:normal;font-size:.85rem;">Results not available</div>
+              <div class="show-card__link">View Details &rarr;</div>
+            </div>
+          </a>
+
+          <!-- 2018 -->
+          <a class="show-card" href="show-2018.html">
+            <div class="show-card__header show-card__header--champ">
+              <span class="show-card__badge">&#127942; Championship Show</span>
+              <span class="show-card__date">2018</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">2018 Championship Show</div>
+              <div class="show-card__bis-label">Judge</div>
+              <div class="show-card__bis-winner" style="color:var(--dark);">Lyndy Morris (Australia)</div>
+              <div class="show-card__link">View Details &rarr;</div>
+            </div>
+          </a>
+
+          <a class="show-card" href="show-2018.html#sept-open">
+            <div class="show-card__header show-card__header--open">
+              <span class="show-card__badge">Open Show</span>
+              <span class="show-card__date">Sep 2018</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">September 2018 Open Show</div>
+              <div class="show-card__bis-label">Best in Show</div>
+              <div class="show-card__bis-winner">NZ CH Mystic Legion Narcissus (Imp Greece)</div>
+              <div class="show-card__link">View Results &rarr;</div>
+            </div>
+          </a>
+
+          <a class="show-card" href="show-2018.html#june-open">
+            <div class="show-card__header show-card__header--open">
+              <span class="show-card__badge">Open Show</span>
+              <span class="show-card__date">Jun 2018</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">June 2018 Open Show</div>
+              <div class="show-card__bis-label">Best in Show</div>
+              <div class="show-card__bis-winner">NZ CH Eldivino Senorita Nikita</div>
+              <div class="show-card__link">View Results &rarr;</div>
+            </div>
+          </a>
+
+          <!-- 2017 -->
+          <a class="show-card" href="show-2017.html">
+            <div class="show-card__header show-card__header--champ">
+              <span class="show-card__badge">&#127942; Championship Show</span>
+              <span class="show-card__date">2017</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">2017 Championship Show</div>
+              <div class="show-card__bis-label">Judge</div>
+              <div class="show-card__bis-winner" style="color:var(--dark);">Dean Freshwater (Australia)</div>
+              <div class="show-card__link">View Details &rarr;</div>
+            </div>
+          </a>
+
+          <a class="show-card" href="show-2017.html#sept-open">
+            <div class="show-card__header show-card__header--open">
+              <span class="show-card__badge">Open Show</span>
+              <span class="show-card__date">Sep 2017</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">September 2017 Open Show</div>
+              <div class="show-card__bis-label">Best in Show</div>
+              <div class="show-card__bis-winner">Ch El-Toro Destiny</div>
+              <div class="show-card__link">View Results &rarr;</div>
+            </div>
+          </a>
+
+          <a class="show-card" href="show-2017.html#july-open">
+            <div class="show-card__header show-card__header--open">
+              <span class="show-card__badge">Open Show</span>
+              <span class="show-card__date">Jul 2017</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">July 2017 Open Show</div>
+              <div class="show-card__bis-label">Best in Show</div>
+              <div class="show-card__bis-winner">NZ CH Eldivino Senorita Nikita</div>
+              <div class="show-card__link">View Results &rarr;</div>
+            </div>
+          </a>
+
+          <!-- 2016 -->
+          <a class="show-card" href="show-2016.html">
+            <div class="show-card__header show-card__header--champ">
+              <span class="show-card__badge">&#127942; Ruby Championship Show</span>
+              <span class="show-card__date">2016</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">2016 Ruby Championship Show</div>
+              <div class="show-card__bis-label">Judge</div>
+              <div class="show-card__bis-winner" style="color:var(--dark);">Norma Ingliss (UK)</div>
+              <div class="show-card__link">View Details &rarr;</div>
+            </div>
+          </a>
+
+          <a class="show-card" href="show-2016.html#emerald">
+            <div class="show-card__header show-card__header--champ">
+              <span class="show-card__badge">&#127942; Emerald Championship Show</span>
+              <span class="show-card__date">2016</span>
+            </div>
+            <div class="show-card__body">
+              <div class="show-card__title">2016 Emerald Championship Show</div>
+              <div class="show-card__bis-label">Judge</div>
+              <div class="show-card__bis-winner" style="color:var(--dark);">Rafael Alcrudo (Spain)</div>
+              <div class="show-card__link">View Details &rarr;</div>
+            </div>
+          </a>
+
         </div>
-
-        <div class="results-pending reveal" style="margin-bottom:2.5rem;">
-          &#127942; Results not yet uploaded. See above for how to add them.
-        </div>
-
-        <!-- 2024 -->
-        <div class="agm-year-header reveal">
-          <span class="agm-year-badge">2024</span>
-          <span class="agm-year-title">Championship Show</span>
-        </div>
-
-        <div class="results-pending reveal">
-          &#127942; Results not yet uploaded.
-        </div>
-
-        <!--
-          HOW TO ADD PAST RESULTS:
-          Copy the same .results-table pattern into each year block above.
-          Save results as a PDF in assets/documents/results/ and optionally add a
-          download link:
-          <a href="assets/documents/results/2025-results.pdf" class="btn btn--outline-dark btn--sm" style="margin-top:1rem;">Download Full Results PDF</a>
-        -->
-
       </div>
     </section>
-
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
@@ -165,8 +298,12 @@
             <li><a href="agm.html">AGM</a></li>
             <li><a href="breed-standard.html">Breed Standard</a></li>
             <li><a href="results.html" class="active">Show Results</a></li>
+            <li><a href="show-classes.html">Show Classes</a></li>
+            <li><a href="breeders.html">Breeders</a></li>
+            <li><a href="community.html">Community &amp; Events</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="join.html">Join</a></li>
+            <li><a href="kuri.html">Our Sponsor: Kuri</a></li>
           </ul>
         </div>
         <div>
@@ -186,7 +323,6 @@
       </div>
     </div>
   </footer>
-
   <script src="js/nav.js"></script>
 </body>
 </html>
