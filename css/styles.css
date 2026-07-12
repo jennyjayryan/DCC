@@ -1441,10 +1441,8 @@ ul  { list-style: none; }
   height: 360px;
   border-radius: 8px;
   object-fit: contain;
-  background: var(--white);
+  background: transparent;
   padding: 0;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border);
 }
 
 .logo-visual__caption {
