@@ -1,16 +1,112 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2019 Championship Shows &mdash; Dominion Chihuahua Club Inc</title>
+  <title>Downloadable Forms &mdash; Dominion Chihuahua Club Inc</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/images/logo.jpg" type="image/jpeg" />
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .forms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-top: 2rem;
+    }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--red), var(--green));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+    }
+
+    .form-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .form-card:hover::before { transform: scaleX(1); }
+
+    .form-card__icon {
+      font-size: 2.25rem;
+      line-height: 1;
+    }
+
+    .form-card__category {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+
+    .form-card__title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      color: var(--dark);
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .form-card__desc {
+      font-size: .875rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+      margin: 0;
+    }
+
+    .form-card__download {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      margin-top: .5rem;
+      padding: .65rem 1.25rem;
+      background: var(--red);
+      color: var(--white);
+      border-radius: var(--r-sm);
+      font-size: .875rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s, transform .2s;
+      align-self: flex-start;
+    }
+
+    .form-card__download:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    .form-card__meta {
+      font-size: .78rem;
+      color: var(--muted);
+      margin-top: .25rem;
+    }
+
+    @media (max-width: 900px) { .forms-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px) { .forms-grid { grid-template-columns: 1fr; } }
+  </style>
 </head>
 <body>
+
+  <!-- ===== NAV ===== -->
   <header id="site-header">
     <nav class="nav container">
       <a href="index.html#home" class="nav__logo">
@@ -27,15 +123,15 @@
             <li><a href="index.html#about">About Us</a></li>
             <li><a href="committee.html">Committee</a></li>
             <li><a href="agm.html">AGM</a></li>
-            <li><a href="forms.html">Forms</a></li>
+            <li><a href="forms.html" class="active">Forms</a></li>
             <li><a href="privacy.html">Privacy Statement</a></li>
           </ul>
         </li>
-        <li><a href="breed-standard.html">Breed</a></li>
+        <li><a href="index.html#breed">Breed</a></li>
         <li class="nav__item">
           <button class="nav__dropdown-btn" aria-expanded="false">Shows</button>
           <ul class="nav__submenu">
-            <li><a href="results.html" class="active">Show Results</a></li>
+            <li><a href="results.html">Show Results</a></li>
             <li><a href="show-classes.html">Show Classes</a></li>
           </ul>
         </li>
@@ -50,71 +146,47 @@
   </header>
 
   <main>
+
+    <!-- ===== PAGE HERO ===== -->
     <section class="page-hero">
       <div class="container">
-        <a href="results.html" class="breadcrumb-link">&larr; All Show Results</a>
-        <span class="eyebrow">2019 &mdash; Canterbury</span>
-        <h1>2019 Championship Shows</h1>
-        <p>Dominion Chihuahua Club held two championship shows in 2019, sanctioned by Dogs New Zealand.</p>
+        <span class="eyebrow">Club Documents</span>
+        <h1>Downloadable Forms</h1>
+        <p>Official forms for the Dominion Chihuahua Club Inc. Download, complete, and return to the club secretary as directed on each form.</p>
       </div>
     </section>
 
-    <!-- JUNE 2019 -->
-    <section class="section" id="june">
+    <!-- ===== FORMS ===== -->
+    <section class="section">
       <div class="container">
 
         <div class="section__header reveal">
-          <span class="eyebrow" style="color:var(--red);">&#127942; June 2019 Championship Show</span>
-          <h2>June 2019 Results</h2>
+          <span class="eyebrow">Governance</span>
+          <h2>Committee Forms</h2>
+          <p class="section__desc">Forms required for committee roles and club administration.</p>
         </div>
 
-        <div class="results-table reveal">
-          <div class="results-row results-row--bis">
-            <span class="results-award">Best in Show</span>
-            <span class="results-winner">NZ CH Payco&rsquo;s Tennessee Moonlight</span>
-          </div>
-          <div class="results-row">
-            <span class="results-award">Reserve Best in Show</span>
-            <span class="results-winner">NZ CH El-Toro Rey Spencer</span>
-          </div>
-          <div class="results-row">
-            <span class="results-award">BIS Owner</span>
-            <span class="results-winner">Margaret Osborne</span>
-          </div>
-          <div class="results-row">
-            <span class="results-award">RBIS Handler</span>
-            <span class="results-winner">Dr Tracey Tonkin</span>
-          </div>
-        </div>
+        <div class="forms-grid">
 
-        <div class="reveal" style="margin-top:2rem; padding:1.5rem 2rem; background:var(--cream); border-radius:var(--r); border-left:4px solid var(--green);">
-          <p style="font-size:.9rem; color:var(--muted); margin:0;">Full placings for this show are held on the Dogs New Zealand records. <a href="https://www.dogsnz.org.nz" target="_blank" rel="noopener" style="color:var(--green);">Visit Dogs NZ</a> for complete results.</p>
+          <div class="form-card reveal">
+            <div class="form-card__icon">&#128221;</div>
+            <span class="form-card__category">Committee</span>
+            <h3 class="form-card__title">Declaration and Consent to Act as a Committee Member</h3>
+            <p class="form-card__desc">Required for all committee members of the Dominion Chihuahua Club Incorporated. Complete and return to the club secretary before taking up your position.</p>
+            <a class="form-card__download" href="assets/documents/forms/declaration-consent-committee.pdf" target="_blank" rel="noopener">
+              &#11123; Download PDF
+            </a>
+            <span class="form-card__meta">PDF &bull; Dominion Chihuahua Club Incorporated</span>
+          </div>
+
         </div>
 
       </div>
     </section>
 
-    <!-- OCTOBER 2019 -->
-    <section class="section section--alt" id="oct">
-      <div class="container">
-
-        <div class="section__header reveal">
-          <span class="eyebrow" style="color:var(--red);">&#127942; October 2019 Championship Show</span>
-          <h2>October 2019 Results</h2>
-        </div>
-
-        <div class="results-pending reveal">
-          Full results for the October 2019 Championship Show are available on the Dogs New Zealand records but are not yet published here. <a href="https://www.dogsnz.org.nz" target="_blank" rel="noopener" style="color:var(--green);">Visit Dogs NZ</a> to look up the results.
-        </div>
-
-        <div class="reveal" style="margin-top:3rem; text-align:center;">
-          <a href="results.html" class="btn btn--outline-dark">&larr; Back to All Show Results</a>
-        </div>
-
-      </div>
-    </section>
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
@@ -133,13 +205,13 @@
             <li><a href="forms.html">Forms</a></li>
             <li><a href="privacy.html">Privacy Statement</a></li>
             <li><a href="breed-standard.html">Breed Standard</a></li>
-            <li><a href="results.html" class="active">Show Results</a></li>
-            <li><a href="show-classes.html">Show Classes</a></li>
+            <li><a href="results.html">Show Results</a></li>
+            <li><a href="index.html#playgroups">Playgroups</a></li>
+            <li><a href="index.html#events">Events</a></li>
             <li><a href="breeders.html">Breeders</a></li>
-            <li><a href="community.html">Community &amp; Events</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="join.html">Join</a></li>
-            <li><a href="kuri.html">Our Sponsor: Kuri</a></li>
+            <li><a href="products.html">Pay Online</a></li>
+            <li><a href="index.html#resources">Resources</a></li>
           </ul>
         </div>
         <div>
@@ -159,8 +231,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/nav.js"></script>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
-
-
